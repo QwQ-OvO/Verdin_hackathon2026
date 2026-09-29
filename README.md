@@ -43,13 +43,13 @@ Learning participation never grants authority to publish a conclusion or change 
 
 ## Tech and current progress
 
-| Area | Plan / status |
-| --- | --- |
-| Frontend | React, TypeScript and Vite; manager and learner views **planned**. Four static screen designs are in [`ui/`](ui/). |
-| Backend | Node.js API with role and task-state checks; **planned**. It will prevent access to AI conclusions before the first submission. |
-| Storage | SQLite for task sources, allocations, judgement versions, hints, reviews and audit events; **planned**. |
-| AI | Server-side model calls for explainable suggestions, limited hints and post-submission evidence checks; **planned**. |
-| Completed so far | User story, frontend and backend specifications, four UI mockups and four product diagrams. **No working application or live AI integration yet.** |
+| Area | Day 3 MVP / current status | Enterprise direction |
+| --- | --- | --- |
+| Frontend | **Planned:** React, TypeScript and Vite for four manager and learner screens. Four English static mockups are complete in [`ui/`](ui/). | Integrate with existing task systems and enterprise identity; refine accessibility and role-based views. |
+| Backend | **Planned:** Node.js API with transparent, step-level allocation rules. Role and task-state checks will keep AI conclusions hidden until the learner's first judgement is saved. The manager confirms allocation and final business use. | Integrate with approval workflows, enforce granular access controls, and retain a reviewable audit trail. |
+| Storage | **Planned:** SQLite will store task sources, allocation decisions, original evidence links, immutable first judgements, hints, revisions and manager reviews. | Move to managed enterprise storage with retention policies, access logging and backups. |
+| AI | **Planned:** Server-side `gpt-4o-mini` calls for material organisation, limited hints and post-submission evidence checks. Business permissions and allocation constraints remain rule-based. | Evaluate an Australia-hosted, local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Model output remains subject to manager review. |
+| Progress and delivery | **Complete:** user story, frontend and backend specifications, four UI mockups and four product diagrams. **Next:** implement and test one real-task learning loop; no working application or live AI integration yet. | Use agile iterations: test the first loop with managers and learners, measure delivery quality, help used and review time, then expand roles and integrations based on evidence. |
 
 ## Day 3 MVP
 
