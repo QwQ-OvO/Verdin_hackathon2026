@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Work allocation and execution authority</title>
+  <desc id="desc">The system separately recommends how a learner should practise a judgement and what authority the learner may exercise. The manager confirms both.</desc>
+  <defs><style>text{font-family:Inter,Arial,sans-serif;fill:#1d1f28}.title{font-size:42px;font-weight:750}.head{font-size:29px;font-weight:740}.row{font-size:20px;font-weight:600}.detail{font-size:16px;fill:#686d7b}.small{font-size:16px}.purple{fill:#563fbb}.green{fill:#15765f}</style><marker id="arrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M0 0L12 5L0 10" fill="#555a65"/></marker></defs>
+  <rect width="1600" height="900" fill="#fff"/>
+  <text x="800" y="90" text-anchor="middle" class="title">02  Work Allocation | Learning ≠ Authority</text>
+  <text x="800" y="126" text-anchor="middle" class="detail">A real task is split into steps; development value and business risk are evaluated separately.</text>
+
+  <rect x="105" y="160" width="385" height="75" rx="13" fill="#f5f3f0" stroke="#c9c4bf"/><text x="297" y="206" text-anchor="middle" class="head" font-size="25">Real work item</text>
+  <line x1="500" y1="198" x2="601" y2="198" stroke="#555a65" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="615" y="160" width="385" height="75" rx="13" fill="#f0eeff" stroke="#9c90f7"/><text x="807" y="206" text-anchor="middle" class="head" font-size="25">Break into steps</text>
+  <line x1="1010" y1="198" x2="1111" y2="198" stroke="#555a65" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="1125" y="160" width="370" height="75" rx="13" fill="#e9f8f2" stroke="#68bda3"/><text x="1310" y="206" text-anchor="middle" class="head" font-size="25">Check capability evidence</text>
+
+  <rect x="105" y="271" width="680" height="400" rx="16" fill="#f5f4ff" stroke="#a89dff" stroke-width="2"/>
+  <circle cx="149" cy="316" r="24" fill="#dad5ff"/><text x="149" y="325" text-anchor="middle" class="head purple">A</text><text x="189" y="326" class="head">Learning arrangement</text>
+  <text x="132" y="355" class="detail">How should this learner experience the judgement?</text>
+  <rect x="132" y="382" width="270" height="52" rx="8" fill="#fff" stroke="#dedaf5"/><text x="267" y="415" text-anchor="middle" class="row">Limited evidence</text><text x="428" y="415" class="head" fill="#7e8190">→</text><rect x="463" y="382" width="294" height="52" rx="8" fill="#e9e7ff" stroke="#c7c0ff"/><text x="610" y="415" text-anchor="middle" class="row purple">Manager-set scaffolding</text>
+  <rect x="132" y="445" width="270" height="52" rx="8" fill="#fff" stroke="#dedaf5"/><text x="267" y="478" text-anchor="middle" class="row">Relevant skill gap</text><text x="428" y="478" class="head" fill="#7e8190">→</text><rect x="463" y="445" width="294" height="52" rx="8" fill="#e9e7ff" stroke="#c7c0ff"/><text x="610" y="478" text-anchor="middle" class="row purple">Learner judges first</text>
+  <rect x="132" y="508" width="270" height="52" rx="8" fill="#fff" stroke="#dedaf5"/><text x="267" y="541" text-anchor="middle" class="row">Judgement improving</text><text x="428" y="541" class="head" fill="#7e8190">→</text><rect x="463" y="508" width="294" height="52" rx="8" fill="#e9e7ff" stroke="#c7c0ff"/><text x="610" y="541" text-anchor="middle" class="row purple">Reduce help next time</text>
+  <rect x="132" y="571" width="270" height="52" rx="8" fill="#fff" stroke="#dedaf5"/><text x="267" y="604" text-anchor="middle" class="row">Stable across contexts</text><text x="428" y="604" class="head" fill="#7e8190">→</text><rect x="463" y="571" width="294" height="52" rx="8" fill="#e9e7ff" stroke="#c7c0ff"/><text x="610" y="604" text-anchor="middle" class="row purple">Advance task complexity</text>
+
+  <rect x="815" y="271" width="680" height="400" rx="16" fill="#f7f6f3" stroke="#c8c1b9" stroke-width="2"/>
+  <circle cx="859" cy="316" r="24" fill="#e6e2de"/><text x="859" y="325" text-anchor="middle" class="head">B</text><text x="899" y="326" class="head">Execution authority</text>
+  <text x="842" y="355" class="detail">What may be done with the result in the live workflow?</text>
+  <rect x="842" y="382" width="270" height="52" rx="8" fill="#fff" stroke="#e4e0dc"/><text x="977" y="415" text-anchor="middle" class="row">Low risk; authorised</text><text x="1138" y="415" class="head" fill="#7e8190">→</text><rect x="1173" y="382" width="294" height="52" rx="8" fill="#e7f8f0" stroke="#b5e7d1"/><text x="1320" y="415" text-anchor="middle" class="row green">Work within scope</text>
+  <rect x="842" y="445" width="270" height="52" rx="8" fill="#fff" stroke="#e4e0dc"/><text x="977" y="478" text-anchor="middle" class="row">High impact output</text><text x="1138" y="478" class="head" fill="#7e8190">→</text><rect x="1173" y="445" width="294" height="52" rx="8" fill="#e7f8f0" stroke="#b5e7d1"/><text x="1320" y="478" text-anchor="middle" class="row green">Manager approves use</text>
+  <rect x="842" y="508" width="270" height="52" rx="8" fill="#fff" stroke="#e4e0dc"/><text x="977" y="541" text-anchor="middle" class="row">No access or reviewer</text><text x="1138" y="541" class="head" fill="#7e8190">→</text><rect x="1173" y="508" width="294" height="52" rx="8" fill="#e7f8f0" stroke="#b5e7d1"/><text x="1320" y="541" text-anchor="middle" class="row green">Do not assign step</text>
+  <rect x="842" y="571" width="270" height="52" rx="8" fill="#fff" stroke="#e4e0dc"/><text x="977" y="604" text-anchor="middle" class="row">Risk-rule change</text><text x="1138" y="604" class="head" fill="#7e8190">→</text><rect x="1173" y="571" width="294" height="52" rx="8" fill="#e7f8f0" stroke="#b5e7d1"/><text x="1320" y="604" text-anchor="middle" class="row green">Separate approval</text>
+
+  <line x1="445" y1="672" x2="445" y2="711" stroke="#555a65" stroke-width="2"/><line x1="1155" y1="672" x2="1155" y2="711" stroke="#555a65" stroke-width="2"/><line x1="445" y1="711" x2="1155" y2="711" stroke="#555a65" stroke-width="2"/><line x1="800" y1="711" x2="800" y2="739" stroke="#555a65" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="177" y="750" width="1246" height="79" rx="14" fill="#e5f8ef" stroke="#67b89b" stroke-width="2"/>
+  <text x="800" y="784" text-anchor="middle" class="head" font-size="25">Task plan = who judges + available help + required evidence + approval boundary</text>
+  <text x="800" y="813" text-anchor="middle" class="detail">The system proposes. The manager confirms or overrides with a reason.</text>
+  <text x="800" y="865" text-anchor="middle" class="small">Learning participation never grants permission to publish, alter controls or approve business decisions.</text>
+</svg>

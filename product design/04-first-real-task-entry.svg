@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1380" viewBox="0 0 1600 1380" role="img" aria-labelledby="title desc">
+  <title id="title">From a capability target to the first real task</title>
+  <desc id="desc">The manager defines a capability target and registers real work, the system proposes a learning and authority plan, and the learner completes a first judgement. Generated baseline exercises and cross-company matching are outside MVP.</desc>
+  <defs><style>text{font-family:Inter,Arial,sans-serif;fill:#1d2029}.title{font-size:43px;font-weight:780}.subtitle{font-size:22px;fill:#555d6b}.lane{font-size:28px;font-weight:740}.box{font-size:21px;font-weight:690}.sub{font-size:16px;fill:#626a79}.num{font-size:21px;font-weight:770}.future{font-size:20px;font-weight:700}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#838996"/></marker></defs>
+  <rect width="1600" height="1380" fill="#fff"/>
+  <text x="800" y="78" text-anchor="middle" class="title">04  From Capability Target to First Real Task</text>
+  <text x="800" y="115" text-anchor="middle" class="subtitle">MVP: one learner, one manager, one company-defined capability and one live work item</text>
+  <rect x="95" y="157" width="443" height="1015" rx="15" fill="#f9fcfa" stroke="#d4e8df"/>
+  <rect x="579" y="157" width="443" height="1015" rx="15" fill="#faf9ff" stroke="#dfdbfb"/>
+  <rect x="1063" y="157" width="443" height="1015" rx="15" fill="#fbfaf8" stroke="#e4dfd9"/>
+  <rect x="95" y="157" width="443" height="55" rx="15" fill="#e3f7f0"/><rect x="579" y="157" width="443" height="55" rx="15" fill="#eeebff"/><rect x="1063" y="157" width="443" height="55" rx="15" fill="#f0eeeb"/>
+  <text x="317" y="194" text-anchor="middle" class="lane">Learner</text><text x="800" y="194" text-anchor="middle" class="lane">AI system</text><text x="1284" y="194" text-anchor="middle" class="lane">Manager / team</text>
+
+  <g fill="none" stroke="#858b95" stroke-width="2.5" marker-end="url(#a)"><path d="M1100 302V351"/><path d="M1100 425H800V474"/><path d="M984 548V597"/><path d="M984 671H1284V720"/><path d="M1100 794H317V843"/><path d="M501 917V966"/><path d="M501 1040H800V1089"/></g>
+
+  <rect x="1100" y="228" width="370" height="74" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1130" cy="265" r="21" fill="#e8e5e0"/><text x="1130" y="273" text-anchor="middle" class="num">1</text><text x="1161" y="257" class="box">Define capability target</text><text x="1161" y="282" class="sub">Example: user insight</text>
+  <rect x="1100" y="351" width="370" height="74" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1130" cy="388" r="21" fill="#e8e5e0"/><text x="1130" y="396" text-anchor="middle" class="num">2</text><text x="1161" y="380" class="box">Register a real task</text><text x="1161" y="405" class="sub">Source, risk, deadline, reviewer</text>
+  <rect x="615" y="474" width="370" height="74" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="645" cy="511" r="21" fill="#ded9ff"/><text x="645" y="519" text-anchor="middle" class="num">3</text><text x="676" y="503" class="box">Check task constraints</text><text x="676" y="528" class="sub">Access, safety, review capacity</text>
+  <rect x="615" y="597" width="370" height="74" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="645" cy="634" r="21" fill="#ded9ff"/><text x="645" y="642" text-anchor="middle" class="num">4</text><text x="676" y="626" class="box">Propose the step plan</text><text x="676" y="651" class="sub">Who judges, help, evidence, approval</text>
+  <rect x="1100" y="720" width="370" height="74" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1130" cy="757" r="21" fill="#e8e5e0"/><text x="1130" y="765" text-anchor="middle" class="num">5</text><text x="1161" y="749" class="box">Confirm or override</text><text x="1161" y="774" class="sub">Manager owns the final allocation</text>
+  <rect x="132" y="843" width="370" height="74" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="162" cy="880" r="21" fill="#caefe0"/><text x="162" y="888" text-anchor="middle" class="num">6</text><text x="193" y="872" class="box">Open the assigned work</text><text x="193" y="897" class="sub">See objective and original evidence</text>
+  <rect x="132" y="966" width="370" height="74" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="162" cy="1003" r="21" fill="#caefe0"/><text x="162" y="1011" text-anchor="middle" class="num">7</text><text x="193" y="995" class="box">Make the first judgement</text><text x="193" y="1020" class="sub">Submit reasoning and citations</text>
+  <rect x="615" y="1089" width="370" height="74" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="645" cy="1126" r="21" fill="#ded9ff"/><text x="645" y="1134" text-anchor="middle" class="num">8</text><text x="676" y="1118" class="box">Lock the first version</text><text x="676" y="1143" class="sub">Preserve evidence and hint history</text>
+
+  <rect x="95" y="1190" width="1411" height="116" rx="15" fill="#fafbfc" stroke="#d3d8e0" stroke-dasharray="7 5"/>
+  <text x="800" y="1223" text-anchor="middle" class="future">Then enter the real-work learning loop</text>
+  <text x="800" y="1253" text-anchor="middle" class="sub">AI evidence check and hints → reasoned revision → manager review → next-context validation</text>
+  <text x="800" y="1283" text-anchor="middle" class="sub">Later expansion: cross-team opportunity discovery and additional roles, after task quality and supervision are proven.</text>
+  <text x="800" y="1343" text-anchor="middle" class="subtitle">No generated baseline exercise or automatic claim of mastery is required for the MVP.</text>
+</svg>

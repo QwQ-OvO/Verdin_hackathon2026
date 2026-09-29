@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1580" viewBox="0 0 1600 1580" role="img" aria-labelledby="title desc">
+  <title id="title">Real-work learning loop</title>
+  <desc id="desc">A manager registers and reviews a real task, an AI system proposes allocation and records evidence, and a learner makes a first judgement and revises. Capability is evaluated across tasks, separately from delivery approval.</desc>
+  <defs><style>text{font-family:Inter,Arial,sans-serif;fill:#1d2029}.title{font-size:43px;font-weight:780}.lane{font-size:28px;font-weight:740}.box{font-size:21px;font-weight:680}.sub{font-size:16px;fill:#626a79}.num{font-size:21px;font-weight:770}.foot{font-size:19px;fill:#444b58}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#838996"/></marker></defs>
+  <rect width="1600" height="1580" fill="#fff"/>
+  <text x="800" y="79" text-anchor="middle" class="title">03  Real-Work Loop | Delivery ≠ Mastery</text>
+  <text x="800" y="113" text-anchor="middle" class="sub">One real task creates a reviewable judgement trail; a new context provides further capability evidence.</text>
+  <rect x="90" y="149" width="456" height="1290" rx="14" fill="#f9fcfa" stroke="#d4e8df"/>
+  <rect x="572" y="149" width="456" height="1290" rx="14" fill="#faf9ff" stroke="#dfdbfb"/>
+  <rect x="1054" y="149" width="456" height="1290" rx="14" fill="#fbfaf8" stroke="#e4dfd9"/>
+  <rect x="90" y="149" width="456" height="55" rx="14" fill="#e3f7f0"/><rect x="572" y="149" width="456" height="55" rx="14" fill="#eeebff"/><rect x="1054" y="149" width="456" height="55" rx="14" fill="#f0eeeb"/>
+  <text x="318" y="186" text-anchor="middle" class="lane">Learner</text><text x="800" y="186" text-anchor="middle" class="lane">AI system</text><text x="1282" y="186" text-anchor="middle" class="lane">Manager / organisation</text>
+
+  <g fill="none" stroke="#858b95" stroke-width="2.5" marker-end="url(#a)">
+    <path d="M1090 280H800V326"/><path d="M995 364H1282V419"/><path d="M1090 457H318V512"/>
+    <path d="M510 550H800V605"/><path d="M605 643H318V698"/><path d="M510 736H1282V791"/>
+    <path d="M1090 829H800V884"/><path d="M992 922H1282V977"/><path d="M1090 1015H318V1070"/>
+    <path d="M510 1108H1282V1163"/><path d="M1090 1201H800V1256"/><path d="M992 1294H1282V1349"/>
+  </g>
+
+  <rect x="1090" y="224" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="262" r="21" fill="#e8e5e0"/><text x="1122" y="270" text-anchor="middle" class="num">1</text><text x="1153" y="254" class="box">Register a real task</text><text x="1153" y="279" class="sub">Source, deadline, risk, review criteria</text>
+  <rect x="608" y="317" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="355" r="21" fill="#ded9ff"/><text x="640" y="363" text-anchor="middle" class="num">2</text><text x="671" y="347" class="box">Propose step allocation</text><text x="671" y="372" class="sub">Learning value + authority checks</text>
+  <rect x="1090" y="410" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="448" r="21" fill="#e8e5e0"/><text x="1122" y="456" text-anchor="middle" class="num">3</text><text x="1153" y="440" class="box">Confirm or override plan</text><text x="1153" y="465" class="sub">Name learner, reviewer, approval limit</text>
+  <rect x="126" y="503" width="384" height="76" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="158" cy="541" r="21" fill="#caefe0"/><text x="158" y="549" text-anchor="middle" class="num">4</text><text x="189" y="533" class="box">Submit first judgement</text><text x="189" y="558" class="sub">Read originals; cite evidence first</text>
+  <rect x="608" y="596" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="634" r="21" fill="#ded9ff"/><text x="640" y="642" text-anchor="middle" class="num">5</text><text x="671" y="626" class="box">Check evidence, give hints</text><text x="671" y="651" class="sub">Only after first version is saved</text>
+  <rect x="126" y="689" width="384" height="76" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="158" cy="727" r="21" fill="#caefe0"/><text x="158" y="735" text-anchor="middle" class="num">6</text><text x="189" y="719" class="box">Revise with reasons</text><text x="189" y="744" class="sub">Show what changed and why</text>
+  <rect x="1090" y="782" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="820" r="21" fill="#e8e5e0"/><text x="1122" y="828" text-anchor="middle" class="num">7</text><text x="1153" y="812" class="box">Review and decide</text><text x="1153" y="837" class="sub">Approve output or return for revision</text>
+  <rect x="608" y="875" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="913" r="21" fill="#ded9ff"/><text x="640" y="921" text-anchor="middle" class="num">8</text><text x="671" y="905" class="box">Record evidence, suggest help</text><text x="671" y="930" class="sub">Versions, hints, feedback → next plan</text>
+  <rect x="1090" y="968" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="1006" r="21" fill="#e8e5e0"/><text x="1122" y="1014" text-anchor="middle" class="num">9</text><text x="1153" y="998" class="box">Confirm next support</text><text x="1153" y="1023" class="sub">Reduce, keep or increase hints</text>
+  <rect x="126" y="1061" width="384" height="76" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="158" cy="1099" r="21" fill="#caefe0"/><text x="158" y="1107" text-anchor="middle" class="num">10</text><text x="189" y="1091" class="box">Try a new real context</text><text x="189" y="1116" class="sub">Similar capability, different situation</text>
+  <rect x="1090" y="1154" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="1192" r="21" fill="#e8e5e0"/><text x="1122" y="1200" text-anchor="middle" class="num">11</text><text x="1153" y="1184" class="box">Assess across tasks</text><text x="1153" y="1209" class="sub">Delivery approval ≠ mastery</text>
+  <rect x="608" y="1247" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="1285" r="21" fill="#ded9ff"/><text x="640" y="1293" text-anchor="middle" class="num">12</text><text x="671" y="1277" class="box">Update evidence profile</text><text x="671" y="1302" class="sub">Keep uncertainty and context visible</text>
+  <rect x="1090" y="1340" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="1378" r="21" fill="#e8e5e0"/><text x="1122" y="1386" text-anchor="middle" class="num">13</text><text x="1153" y="1370" class="box">Confirm next allocation</text><text x="1153" y="1395" class="sub">Manager retains final judgement</text>
+
+  <rect x="100" y="1450" width="1400" height="80" rx="12" fill="#fffdf6" stroke="#efdba0"/>
+  <text x="800" y="1481" text-anchor="middle" class="foot">Before the first submission: AI may organise material or ask limited questions, but must not reveal its conclusion.</text>
+  <text x="800" y="1510" text-anchor="middle" class="foot">A first judgement and every hint are recorded; changes to business risk controls require separate approval.</text>
+</svg>
