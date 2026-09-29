@@ -62,6 +62,29 @@ export class TaskWorkflowService {
       if (task.version !== input.expectedVersion) throw new ApiError(409, 'version_conflict', 'Task version has changed');
       if (!transition.from.includes(task.status)) throw new ApiError(409, 'invalid_transition', 'Action is not allowed from this task state');
 
+      if (input.event === 'learner_started' || input.event === 'first_judgment_submitted') {
+        // Recheck the learner's source scope at action time, including after a manager
+        // assignment or a later access revocation.
+        this.getTaskView(task.id, actor.id);
+        const learnerSteps = this.db.prepare(`SELECT COUNT(*) AS count FROM allocations a
+          JOIN task_steps s ON s.id = a.step_id
+          WHERE a.task_id = ? AND s.step_key IN ('identify_patterns', 'select_priorities')
+            AND a.confirmed_owner = 'learner'`).get(task.id) as { count: number };
+        if (learnerSteps.count !== 2) {
+          throw new ApiError(403, 'forbidden', 'The learner was not assigned both judgment steps');
+        }
+      }
+
+      if (input.event === 'first_judgment_submitted') {
+        // A first version saved before this transaction cannot be used to
+        // unlock the post-submission state. The callback must create it now.
+        const existing = this.db.prepare('SELECT 1 FROM judgment_versions WHERE task_id = ? AND version_number = 1')
+          .get(task.id);
+        if (!applyRecords || existing) {
+          throw new ApiError(409, 'missing_first_judgment', 'Save the first judgment and citations with submission');
+        }
+      }
+
       // Domain records supplied by the caller commit with the state and audit event.
       applyRecords?.();
       if (input.event === 'proposal_generated' || input.event === 'assignment_confirmed') {
@@ -76,6 +99,18 @@ export class TaskWorkflowService {
         const complete = counts.required_count > 0 && counts.proposed_count === counts.required_count &&
           (input.event === 'proposal_generated' || counts.confirmed_count === counts.required_count);
         if (!complete) throw new ApiError(409, 'missing_allocation_records', 'Allocation records must be saved with this state change');
+      }
+      if (input.event === 'first_judgment_submitted') {
+        // A state transition alone cannot unlock post-submission AI feedback.
+        // The first version and at least one original citation must already exist
+        // in this same transaction.
+        const saved = this.db.prepare(`SELECT v.id, v.author_id, COUNT(c.feedback_id) AS citations
+          FROM judgment_versions v LEFT JOIN judgment_citations c ON c.judgment_version_id = v.id
+          WHERE v.task_id = ? AND v.version_number = 1 GROUP BY v.id`).get(task.id) as
+          { id: string; author_id: string; citations: number } | undefined;
+        if (!saved || saved.author_id !== actor.id || saved.citations === 0) {
+          throw new ApiError(409, 'missing_first_judgment', 'Save the first judgment and citations with submission');
+        }
       }
       // The task version and audit event commit together or roll back together.
       const now = new Date().toISOString();
@@ -128,6 +163,13 @@ export class TaskWorkflowService {
       }
     }
 
+    // The UI action list reflects the confirmed step owners, while the write
+    // commands independently recheck this permission inside their transaction.
+    const learnerHasJudgmentSteps = isLearner && (this.db.prepare(`SELECT COUNT(*) AS count FROM allocations a
+      JOIN task_steps s ON s.id = a.step_id WHERE a.task_id = ?
+      AND s.step_key IN ('identify_patterns', 'select_priorities') AND a.confirmed_owner = 'learner'`)
+      .get(task.id) as { count: number }).count === 2;
+
     // Build an allowlisted response; never serialize a complete database row.
     const view: Record<string, unknown> = {
       id: task.id, title: task.title, status: task.status, version: task.version,
@@ -136,7 +178,8 @@ export class TaskWorkflowService {
       deadline_at: task.deadline_at, capability_id: task.capability_id, risk_level: task.risk_level,
       allowed_actions: isManager ? (task.status === 'draft' ? ['generate_proposal'] :
         task.status === 'proposed' ? ['confirm_assignment'] : []) :
-        (task.status === 'assigned' ? ['start_task'] : []),
+        (learnerHasJudgmentSteps && task.status === 'assigned' ? ['start_task'] :
+          learnerHasJudgmentSteps && task.status === 'in_progress' ? ['submit_first_judgment'] : []),
     };
     if (isManager && (task.status === 'proposed' || task.status === 'assigned')) {
       view.allocation_proposal = this.db.prepare(`SELECT a.step_id, s.step_key,
@@ -177,6 +220,15 @@ export class TaskWorkflowService {
         groups.get(link.id)!.source_ids.push(link.feedback_id);
       }
       view.organization_groups = [...groups.values()];
+    }
+    if (task.status !== 'draft' && task.status !== 'proposed' && task.status !== 'assigned' && task.status !== 'in_progress') {
+      // Explicitly project the learner's saved work only after the irreversible
+      // first-submission boundary. Never return a complete database row.
+      const saved = this.db.prepare(`SELECT id, version_number, author_id, content_json, created_at
+        FROM judgment_versions WHERE task_id = ? AND version_number = 1`).get(task.id) as
+        { id: string; version_number: number; author_id: string; content_json: string; created_at: string } | undefined;
+      if (saved) view.first_judgment = { id: saved.id, version_number: saved.version_number,
+        author_id: saved.author_id, created_at: saved.created_at, ...JSON.parse(saved.content_json) };
     }
     return view;
   }

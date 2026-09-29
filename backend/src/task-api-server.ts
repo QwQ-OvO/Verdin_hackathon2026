@@ -2,6 +2,7 @@ import http, { type Server } from 'node:http';
 import { DatabaseSync } from 'node:sqlite';
 import { ApiError, TaskWorkflowService } from './services/task-workflow-service.ts';
 import { TaskAllocationService } from './services/task-allocation-service.ts';
+import { FirstJudgmentService } from './services/first-judgment-service.ts';
 import type { AllocationOwner } from './services/allocation-rule-engine.ts';
 
 function sendJson(response: http.ServerResponse, status: number, body: unknown, headers: Record<string, string> = {}): void {
@@ -41,6 +42,7 @@ function expectedVersion(body: Record<string, unknown>): number {
 export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<string, string> }): Server {
   const workflow = new TaskWorkflowService(options.db);
   const allocation = new TaskAllocationService(options.db);
+  const firstJudgment = new FirstJudgmentService(options.db);
   return http.createServer((request, response) => {
     const handleRequest = async () => {
       const pathname = new URL(request.url ?? '/', 'http://localhost').pathname;
@@ -48,7 +50,7 @@ export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<str
         sendJson(response, 200, { data: { status: 'ok' } });
         return;
       }
-      const match = /^\/tasks\/([^/]+)(?:\/(proposal|assignment))?$/.exec(pathname);
+      const match = /^\/tasks\/([^/]+)(?:\/(proposal|assignment|start|first-judgment))?$/.exec(pathname);
       if (!match) throw new ApiError(404, 'not_found', 'Route not found');
       const authorization = request.headers.authorization;
       const token = authorization?.startsWith('Bearer ') ? authorization.slice(7) : undefined;
@@ -86,6 +88,18 @@ export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<str
         });
         const result = allocation.confirmAssignment({ taskId, actorId, expectedVersion: expectedVersion(body), decisions });
         sendJson(response, 200, { data: { task_id: result.taskId, status: result.status, version: result.version } });
+        return;
+      }
+      if (request.method === 'POST' && match[2] === 'start') {
+        const body = await readJsonObject(request);
+        const result = firstJudgment.startTask({ taskId, actorId, expectedVersion: expectedVersion(body) });
+        sendJson(response, 200, { data: { task_id: result.id, status: result.status, version: result.version } });
+        return;
+      }
+      if (request.method === 'POST' && match[2] === 'first-judgment') {
+        const body = await readJsonObject(request);
+        const result = firstJudgment.submit({ taskId, actorId, expectedVersion: expectedVersion(body), body });
+        sendJson(response, 201, { data: result }, { location: `/tasks/${encodeURIComponent(taskId)}` });
         return;
       }
       throw new ApiError(404, 'not_found', 'Route not found');

@@ -83,11 +83,44 @@ Keep the routes already specified in [`backend-design.md`](../../docs/backend-de
 - `GET /tasks/:id` returns a role- and state-filtered view, including `allowed_actions`; it never serializes private fields and relies on authorization at the server.
 - `POST /tasks/:id/proposal` returns a recommendation per task step with `suggested_owner`, `rule_ids`, `reason`, and `requires_manager_approval`.
 - `POST /tasks/:id/assignment` records the manager's choice for each step and an `override_reason` where it differs from the proposal.
-- `POST /tasks/:id/first-judgment` accepts `expected_version`, `patterns`, exactly two `priorities`, `uncertainties`, and source `evidence_ids`. It atomically creates version 1 once.
+- `POST /tasks/:id/start` accepts `expected_version` and moves the assigned learner's task to `in_progress` only when both judgment steps remain assigned to that learner and source access is valid.
+- `POST /tasks/:id/first-judgment` accepts `expected_version`, `patterns`, `evidence_ids`, exactly two `priorities`, `journey_stage_distinctions`, and `uncertainties`. It atomically creates version 1 once.
 - `POST /tasks/:id/hints` accepts a requested help level; the server checks the state and appends a hint event.
 - `POST /tasks/:id/revisions` appends a version with `change_reason` and a parent version ID.
 - `POST /tasks/:id/review` records `approved` or `changes_requested`, feedback, and business-use scope. Capability evidence and the next-support recommendation are separate from this decision.
 - `GET /tasks/:id/history` returns only entries the actor may see at the current state.
+
+### Step 3 first-judgment request
+
+The learner starts with `POST /tasks/TASK-ONB-001/start` and `{ "expected_version": 2 }`. The returned task version is used in the first-judgment request:
+
+```json
+{
+  "expected_version": 3,
+  "patterns": "Some comments describe friction at different onboarding stages.",
+  "evidence_ids": ["FB-014", "FB-018"],
+  "priorities": [
+    {
+      "focus": "Investigate document upload friction",
+      "reason": "Repeated upload attempts warrant investigation.",
+      "evidence_ids": ["FB-014"],
+      "contrary_evidence_ids": ["FB-021"],
+      "next_check": "Compare upload attempts with support records."
+    },
+    {
+      "focus": "Investigate verification review delay",
+      "reason": "Review timing may affect activation.",
+      "evidence_ids": ["FB-018"],
+      "contrary_evidence_ids": [],
+      "next_check": "Check review timestamps."
+    }
+  ],
+  "journey_stage_distinctions": "Upload and verification review are separate stages.",
+  "uncertainties": "The sample may not represent every merchant."
+}
+```
+
+Every cited ID must resolve to this task's original feedback. A successful submission returns `201 Created`, task status `first_submitted`, and judgment version 1. Repeated or stale submissions return `409 Conflict`; invalid content or evidence returns `422 Unprocessable Entity`. The saved first judgment becomes read-only in `GET /tasks/:id` after submission. Its `assisted` flag reflects any recorded pre-submission hint use; hint generation is implemented in Step 4.
 
 All writes record actor ID and timestamp. The initial judgment needs a database uniqueness constraint and transaction, not a frontend disabled button, to prevent two first versions from concurrent clicks.
 

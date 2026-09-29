@@ -47,11 +47,12 @@ Learning participation never grants authority to publish a conclusion or change 
 | --- | --- | --- |
 | Product design | User story, frontend and backend specifications, four product diagrams, and four English UI mockups in [`ui/`](ui/). | Validate the learning loop with a manager and learner. |
 | Backend Step 0 | English [demo contract](backend/docs/demo-contract.md), manager rubric, and clearly labelled synthetic task, user, and feedback fixtures. | Keep the contract aligned with implementation changes. |
-| Backend Steps 1–2 | Node.js/TypeScript API and SQLite persistence; guarded state transitions, version checks, append-only audit events, role-filtered task reads, transparent step-level allocation, and manager confirmation with hard-constraint rechecks. | Protect and save the learner's first judgment, including evidence validation and concurrent-submit handling. |
+| Backend Steps 1–2 | Node.js/TypeScript API and SQLite persistence; guarded state transitions, version checks, append-only audit events, role-filtered task reads, transparent step-level allocation, and manager confirmation with hard-constraint rechecks. | Continue using these foundations for hints and review. |
+| Backend Step 3 | Learner start and first-judgment APIs; task/source/step authorization at write time; structured two-priority validation; original-feedback citation checks; one atomic, append-only first version; role- and state-filtered readback. Duplicate or concurrent submissions create one version. | Add controlled hints and model output validation in Step 4. |
 | Frontend | Static mockups show manager assignment, learner judgment, revision, and manager review. | Build the four React/TypeScript screens and connect them to the API. |
 | AI | No live model integration. Source-preserving organization groups are curated demo data. | Add server-side material organization, limited hints, and post-submission evidence checks after the first-judgment boundary is enforced. |
 
-The current backend runs the manager allocation path and opens the assigned task to the learner; the judgment and review path is still to come. Business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
+The current backend runs manager allocation through the learner's saved first judgment. Hints, revision, business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
 
 ### Run the current backend
 
@@ -65,7 +66,7 @@ $env:DEMO_LEARNER_TOKEN = '<choose-a-different-secret-learner-token>'
 npm start
 ```
 
-The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. A manager can `POST /tasks/TASK-ONB-001/proposal` and then `POST /tasks/TASK-ONB-001/assignment` using the request shapes in the [demo contract](backend/docs/demo-contract.md). The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Use `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
+The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. A manager can propose and confirm allocation, then the learner can call `POST /tasks/TASK-ONB-001/start` and `POST /tasks/TASK-ONB-001/first-judgment` using the request shapes in the [demo contract](backend/docs/demo-contract.md). The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Use `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
 
 ## Day 3 MVP
 
