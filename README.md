@@ -45,17 +45,15 @@ Learning participation never grants authority to publish a conclusion or change 
 
 [Entry to the first real task](product%20design/04-first-real-task-entry.svg)
 
-## Current progress
+## Tech and current progress
 
-| Area | Completed | Next |
+| Area | Day 3 demo design / current status | Enterprise production direction |
 | --- | --- | --- |
-| Product design | User story, frontend and backend specifications, four product diagrams, and four English UI mockups in [`ui/`](ui/). | Validate the learning loop with a manager and learner. |
-| Backend Step 0 | English [demo contract](backend/docs/demo-contract.md), manager rubric, and clearly labelled synthetic task, user, and feedback fixtures. | Keep the contract aligned with implementation changes. |
-| Backend Steps 1–2 | Node.js/TypeScript API and SQLite persistence; guarded state transitions, version checks, append-only audit events, role-filtered task reads, transparent step-level allocation, and manager confirmation with hard-constraint rechecks. | Continue using these foundations for hints and review. |
-| Backend Step 3 | Learner start and first-judgment APIs; task/source/step authorization at write time; structured two-priority validation; original-feedback citation checks; one atomic, append-only first version; role- and state-filtered readback. Duplicate or concurrent submissions create one version. | Use the protected submission boundary for feedback and revision. |
-| Backend Step 4 | Level 1 vetted reflection question before submission; level 2 source clue and level 3 evidence check after submission; server-side model adapter, output/source-ID validation, repeat-safe hint requests, append-only hint and audit records, and role-filtered hint reads. | Add append-only revisions and manager review in Step 5. |
-| Frontend | Static mockups show manager assignment, learner judgment, revision, and manager review. | Build the four React/TypeScript screens and connect them to the API. |
-| AI | Source-preserving organization groups are curated demo data. Hints use a deterministic synthetic-demo adapter by default; an optional server-side OpenAI Responses adapter can be enabled with credentials. | Evaluate live hint quality on approved data and add the Step 5 revision and review flow. |
+| Frontend | React, TypeScript and Vite are planned for four manager and learner screens. Four English static mockups are complete in [`ui/`](ui/). | Integrate with existing task systems and enterprise identity; refine accessibility and role-based views. |
+| Backend | The Node.js/TypeScript API implements guarded task states, transparent step-level allocation, manager confirmation, a protected first judgement, and controlled hints. Append-only revisions and manager review are planned for Step 5. | Integrate with approval workflows, enforce granular access controls, and retain a reviewable audit trail. |
+| Storage | SQLite persists tasks, source links, allocation decisions, the immutable first judgement, hints and audit events. Revision and review records are planned for Step 5. | Move to managed enterprise storage with retention policies, access logging and backups. |
+| AI | Curated, source-preserving groups and a deterministic hint adapter keep the synthetic demo repeatable. An optional server-side OpenAI Responses adapter is implemented for post-submission hints; `gpt-4o-mini` is the planned live-model candidate, but live hint quality has not been verified. Permissions and allocation constraints remain rule-based. | Evaluate an Australia-hosted, local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Validate quality and data handling; model output remains subject to manager review. |
+| Progress and delivery | The user story, specifications, four product diagrams, four UI mockups, and backend Steps 0–4 are complete. Next: build the screens, append-only revisions and manager review, then test the full learning loop with a manager and learner. | Iterate with managers and learners; measure delivery quality, help used and review time before expanding roles and integrations. |
 
 The current backend runs manager allocation through saved first judgment and controlled hints. Revision, business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
 
