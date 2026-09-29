@@ -1,61 +1,98 @@
+<?xml version="1.0" ?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
-  <defs>
-    <style>
-      text{font-family:'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;fill:#17191f} .muted{fill:#737987} .small{font-size:13px} .label{font-size:12px;font-weight:700;letter-spacing:1px} .title{font-size:30px;font-weight:700} .body{font-size:15px} .bold{font-weight:700} .white{fill:#fff} .purple{fill:#612fff}
-    </style>
-  </defs>
-  <rect width="1440" height="900" fill="#f6f7fa"/>
-  <rect width="232" height="900" fill="#fff"/>
-  <path d="M232 0V900" stroke="#e6e8ee"/>
-  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/><text x="44" y="53" text-anchor="middle" class="white bold" font-size="20">A</text>
-  <text x="73" y="52" font-size="18" font-weight="700">apprentice</text><text x="27" y="91" class="muted small">AIRWALLEX · INTERNAL CONCEPT</text>
-  <text x="28" y="139" class="muted label">WORKSPACE</text>
-  <rect x="16" y="158" width="200" height="44" rx="9" fill="#f1ebff"/><rect x="16" y="158" width="4" height="44" rx="2" fill="#612fff"/><text x="45" y="186" class="purple bold body">任务分工</text>
-  <text x="45" y="238" class="muted body">团队任务</text><text x="45" y="287" class="muted body">能力证据</text><text x="45" y="336" class="muted body">审核记录</text>
-  <path d="M24 815H208" stroke="#e7e8ed"/><circle cx="47" cy="852" r="18" fill="#e9e0ff"/><text x="47" y="857" text-anchor="middle" class="purple bold small">陈</text><text x="76" y="848" class="bold small">陈主管</text><text x="76" y="866" class="muted" font-size="11">Product · Manager</text>
-  <text x="274" y="48" class="muted small">团队任务  /  新建任务  /  分工确认</text>
-  <rect x="1257" y="27" width="145" height="38" rx="8" fill="#fff" stroke="#dfe1e7"/><text x="1330" y="51" text-anchor="middle" class="small bold">保存草稿</text>
-  <text x="274" y="112" class="title">确认这项工作的学习分工</text>
-  <text x="274" y="141" class="muted body">系统按步骤提出建议；主管决定新人参与的位置与最终审核责任。</text>
-  <rect x="274" y="169" width="1128" height="88" rx="12" fill="#fff" stroke="#e5e7ec"/>
-  <rect x="294" y="190" width="79" height="24" rx="12" fill="#e8f7f1"/><text x="333" y="207" text-anchor="middle" fill="#087656" font-size="11" font-weight="700">真实工作</text>
-  <text x="385" y="209" class="bold body">商户开户与验证流程：近期反馈分析</text>
-  <text x="294" y="237" class="muted small">来源：Product Onboarding 待办 · 反馈批次 OB-0929 · 48 条脱敏反馈</text>
-  <text x="1146" y="208" class="muted small">截止时间</text><text x="1146" y="235" class="bold body">10 月 2 日 17:00</text>
-  <rect x="274" y="280" width="742" height="537" rx="14" fill="#fff" stroke="#e5e7ec"/>
-  <text x="299" y="315" font-size="18" font-weight="700">逐步骤分工建议</text><text x="299" y="339" class="muted small">目标能力：从零散反馈中识别问题模式，并说明优先级依据</text>
-  <path d="M299 361H991" stroke="#eceef2"/>
-  <text x="299" y="390" class="muted label">工作步骤</text><text x="622" y="390" class="muted label">建议负责人</text><text x="789" y="390" class="muted label">判断依据</text>
-  <path d="M299 405H991" stroke="#eceef2"/>
-  <text x="299" y="442" class="bold body">01  整理反馈与产品背景</text><text x="299" y="466" class="muted small">去重、标注来源，保留原始反馈</text>
-  <rect x="610" y="421" width="122" height="30" rx="15" fill="#f1ebff"/><text x="671" y="441" text-anchor="middle" class="purple bold small">AI 处理</text>
-  <text x="789" y="442" class="small">重复整理；自动化收益高</text><text x="789" y="463" class="muted small">每条摘要可回溯原文</text>
-  <path d="M299 490H991" stroke="#eceef2"/>
-  <rect x="288" y="502" width="714" height="106" rx="9" fill="#faf8ff"/>
-  <text x="299" y="535" class="bold body">02  识别问题模式</text><text x="299" y="559" class="muted small">判断哪些反馈指向同一障碍</text>
-  <rect x="610" y="514" width="122" height="30" rx="15" fill="#e6f5ef"/><text x="671" y="534" text-anchor="middle" fill="#087656" font-size="13" font-weight="700">新人判断</text>
-  <text x="789" y="535" class="small">匹配“用户洞察”能力缺口</text><text x="789" y="556" class="muted small">保留可控的真实判断练习</text>
-  <path d="M299 620H991" stroke="#eceef2"/>
-  <text x="299" y="657" class="bold body">03  选择两个调查重点</text><text x="299" y="681" class="muted small">引用原始反馈说明优先级</text>
-  <rect x="610" y="636" width="122" height="30" rx="15" fill="#e6f5ef"/><text x="671" y="656" text-anchor="middle" fill="#087656" font-size="13" font-weight="700">新人判断</text>
-  <text x="789" y="657" class="small">练习权衡证据与影响</text><text x="789" y="678" class="muted small">首次提交前隐藏 AI 结论</text>
-  <path d="M299 706H991" stroke="#eceef2"/>
-  <text x="299" y="743" class="bold body">04  批准结论用于产品决策</text><text x="299" y="767" class="muted small">核实依据并决定后续行动</text>
-  <rect x="610" y="722" width="122" height="30" rx="15" fill="#f0f1f4"/><text x="671" y="742" text-anchor="middle" fill="#525967" font-size="13" font-weight="700">主管审核</text>
-  <text x="789" y="743" class="small">最终业务责任须明确</text><text x="789" y="764" class="muted small">涉及风控改动需另行审批</text>
-  <rect x="1034" y="280" width="368" height="258" rx="14" fill="#fff" stroke="#e5e7ec"/>
-  <text x="1058" y="316" font-size="18" font-weight="700">任务约束</text>
-  <text x="1058" y="357" class="muted small">业务风险</text><text x="1270" y="357" class="bold small">中等 · 可复核</text>
-  <path d="M1058 371H1378" stroke="#eceef2"/>
-  <text x="1058" y="400" class="muted small">材料权限</text><text x="1236" y="400" class="bold small">仅脱敏反馈</text>
-  <path d="M1058 414H1378" stroke="#eceef2"/>
-  <text x="1058" y="443" class="muted small">最终审核人</text><text x="1281" y="443" class="bold small">陈主管</text>
-  <path d="M1058 457H1378" stroke="#eceef2"/>
-  <rect x="1058" y="475" width="320" height="42" rx="8" fill="#fff7e8"/><text x="1070" y="501" fill="#8b5a12" font-size="12">新人无权更改验证或风控规则</text>
-  <rect x="1034" y="554" width="368" height="263" rx="14" fill="#fff" stroke="#e5e7ec"/>
-  <text x="1058" y="590" font-size="18" font-weight="700">主管确认</text>
-  <text x="1058" y="620" class="muted small">可修改建议负责人；改判时记录原因。</text>
-  <rect x="1058" y="643" width="320" height="71" rx="8" fill="#f7f8fa" stroke="#e4e6ec"/><text x="1074" y="669" class="muted small">改判原因（如有）</text><text x="1074" y="694" class="muted small">点击后填写说明…</text>
-  <rect x="1058" y="736" width="320" height="52" rx="9" fill="#612fff"/><text x="1218" y="769" text-anchor="middle" class="white bold body">确认分工并发布任务  →</text>
-  <text x="274" y="862" class="muted small">演示概念稿 · 学习分工不改变现有审批权限</text><text x="1330" y="862" text-anchor="end" class="muted small">01 / 04</text>
+  <style>text{font-family:Inter,Arial,sans-serif}</style>
+  <rect x="0" y="0" width="1440" height="900" rx="0" fill="#f6f7fa"/>
+  <rect x="0" y="0" width="232" height="900" rx="0" fill="#fff"/>
+  <path d="M232 0V900" stroke="#e2e5ec"/>
+  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/>
+  <text x="44" y="53" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">A</text>
+  <text x="73" y="52" font-size="18" font-weight="700" fill="#17191f">apprentice</text>
+  <text x="27" y="91" font-size="11" font-weight="400" fill="#687080">AIRWALLEX · PRODUCT CONCEPT</text>
+  <text x="28" y="139" font-size="12" font-weight="700" fill="#687080">MANAGER</text>
+  <rect x="16" y="158" width="200" height="43" rx="8" fill="#f1ebff"/>
+  <rect x="16" y="158" width="4" height="43" rx="2" fill="#612fff"/>
+  <text x="44" y="186" font-size="14" font-weight="700" fill="#612fff">Task allocation</text>
+  <text x="44" y="235" font-size="14" font-weight="400" fill="#687080">Team tasks</text>
+  <text x="44" y="284" font-size="14" font-weight="400" fill="#687080">Capability evidence</text>
+  <text x="44" y="333" font-size="14" font-weight="400" fill="#687080">Review trail</text>
+  <path d="M24 815H208" stroke="#e2e5ec"/>
+  <rect x="29" y="834" width="36" height="36" rx="18" fill="#e9e0ff"/>
+  <text x="47" y="857" font-size="13" font-weight="700" fill="#612fff" text-anchor="middle">M</text>
+  <text x="76" y="848" font-size="13" font-weight="700" fill="#17191f">Product Manager</text>
+  <text x="76" y="866" font-size="11" font-weight="400" fill="#687080">Manager workspace</text>
+  <text x="274" y="48" font-size="13" font-weight="400" fill="#687080">Manager workspace  /  OB-0929  /  Confirm allocation</text>
+  <text x="274" y="108" font-size="29" font-weight="700" fill="#17191f">Confirm learning in a real task</text>
+  <text x="274" y="138" font-size="14" font-weight="400" fill="#687080">Transparent step rules propose who works, who can help, and who approves.</text>
+  <rect x="274" y="161" width="1128" height="91" rx="12" fill="#fff" stroke="#e2e5ec"/>
+  <rect x="294" y="179" width="102" height="28" rx="14" fill="#e7f6ef"/>
+  <text x="345.0" y="198" font-size="12" font-weight="700" fill="#087656" text-anchor="middle">DE-IDENTIFIED</text>
+  <text x="407" y="199" font-size="16" font-weight="700" fill="#17191f">Merchant onboarding feedback review</text>
+  <text x="294" y="232" font-size="12" font-weight="400" fill="#687080">Source: Product Onboarding backlog · Batch OB-0929 · demo feedback set</text>
+  <text x="1170" y="190" font-size="11" font-weight="700" fill="#687080">DUE</text>
+  <text x="1170" y="216" font-size="14" font-weight="700" fill="#17191f">2 Oct · 17:00</text>
+  <rect x="274" y="270" width="741" height="548" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="298" y="308" font-size="18" font-weight="700" fill="#17191f">Step allocation</text>
+  <text x="298" y="333" font-size="13" font-weight="400" fill="#687080">Capability target: User insight  ⌄   ·   Identify patterns and evidence-based priorities.</text>
+  <path d="M298 351H991" stroke="#e2e5ec"/>
+  <text x="298" y="377" font-size="11" font-weight="700" fill="#687080">WORK STEP</text>
+  <text x="607" y="377" font-size="11" font-weight="700" fill="#687080">OWNER · EDITABLE</text>
+  <text x="780" y="377" font-size="11" font-weight="700" fill="#687080">WHY THIS STEP</text>
+  <path d="M298 392H991" stroke="#e2e5ec"/>
+  <text x="298" y="431" font-size="14" font-weight="700" fill="#17191f">01  Prepare source material</text>
+  <text x="298" y="455" font-size="12" font-weight="400" fill="#687080">Deduplicate and preserve source IDs</text>
+  <rect x="605" y="418" width="140" height="28" rx="14" fill="#f1ebff"/>
+  <text x="675.0" y="437" font-size="12" font-weight="700" fill="#612fff" text-anchor="middle">AI prepares</text>
+  <text x="743" y="437" font-size="16" font-weight="700" fill="#687080">⌄</text>
+  <text x="780" y="433" font-size="12" font-weight="400" fill="#17191f">Efficient; source text retained.</text>
+  <path d="M298 486H991" stroke="#e2e5ec"/>
+  <text x="298" y="524" font-size="14" font-weight="700" fill="#17191f">02  Identify problem patterns</text>
+  <text x="298" y="548" font-size="12" font-weight="400" fill="#687080">Group feedback into possible obstacles</text>
+  <rect x="605" y="511" width="140" height="28" rx="14" fill="#e7f6ef"/>
+  <text x="675.0" y="530" font-size="12" font-weight="700" fill="#087656" text-anchor="middle">Learner judges</text>
+  <text x="743" y="530" font-size="16" font-weight="700" fill="#687080">⌄</text>
+  <text x="780" y="526" font-size="12" font-weight="400" fill="#17191f">Practises the current skill gap.</text>
+  <path d="M298 579H991" stroke="#e2e5ec"/>
+  <text x="298" y="617" font-size="14" font-weight="700" fill="#17191f">03  Choose two priorities</text>
+  <text x="298" y="641" font-size="12" font-weight="400" fill="#687080">Explain trade-offs and cite source IDs</text>
+  <rect x="605" y="604" width="140" height="28" rx="14" fill="#e7f6ef"/>
+  <text x="675.0" y="623" font-size="12" font-weight="700" fill="#087656" text-anchor="middle">Learner judges</text>
+  <text x="743" y="623" font-size="16" font-weight="700" fill="#687080">⌄</text>
+  <text x="780" y="619" font-size="12" font-weight="400" fill="#17191f">Key judgement stays with the learner.</text>
+  <path d="M298 672H991" stroke="#e2e5ec"/>
+  <text x="298" y="710" font-size="14" font-weight="700" fill="#17191f">04  Approve business use</text>
+  <text x="298" y="734" font-size="12" font-weight="400" fill="#687080">Review evidence before any team decision</text>
+  <rect x="605" y="697" width="140" height="28" rx="14" fill="#f0f1f4"/>
+  <text x="675.0" y="716" font-size="12" font-weight="700" fill="#535d6b" text-anchor="middle">Manager approves</text>
+  <text x="743" y="716" font-size="16" font-weight="700" fill="#687080">⌄</text>
+  <text x="780" y="712" font-size="12" font-weight="400" fill="#17191f">Final approval stays with manager.</text>
+  <path d="M298 765H991" stroke="#e2e5ec"/>
+  <rect x="298" y="784" width="693" height="20" rx="4" fill="#f8f5ff"/>
+  <text x="308" y="798" font-size="11" font-weight="400" fill="#612fff">Manager can override an owner; the reason is saved with the proposal.</text>
+  <rect x="1033" y="270" width="369" height="253" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1057" y="308" font-size="18" font-weight="700" fill="#17191f">Decision checks</text>
+  <text x="1057" y="338" font-size="12" font-weight="400" fill="#687080">Capability evidence</text>
+  <text x="1377" y="338" font-size="12" font-weight="700" fill="#17191f" text-anchor="end">Needs pattern practice</text>
+  <path d="M1057 351H1378" stroke="#e2e5ec"/>
+  <text x="1057" y="378" font-size="12" font-weight="400" fill="#687080">Business risk</text>
+  <text x="1377" y="378" font-size="12" font-weight="700" fill="#17191f" text-anchor="end">Moderate · reversible</text>
+  <path d="M1057 391H1378" stroke="#e2e5ec"/>
+  <text x="1057" y="418" font-size="12" font-weight="400" fill="#687080">Access</text>
+  <text x="1377" y="418" font-size="12" font-weight="700" fill="#17191f" text-anchor="end">De-identified only</text>
+  <path d="M1057 431H1378" stroke="#e2e5ec"/>
+  <text x="1057" y="458" font-size="12" font-weight="400" fill="#687080">Reviewer available</text>
+  <text x="1377" y="458" font-size="12" font-weight="700" fill="#17191f" text-anchor="end">Product Manager</text>
+  <path d="M1057 471H1378" stroke="#e2e5ec"/>
+  <rect x="1057" y="491" width="321" height="23" rx="5" fill="#fff7e8"/>
+  <text x="1066" y="507" font-size="11" font-weight="400" fill="#8b5a12">Risk-rule changes require separate approval.</text>
+  <rect x="1033" y="541" width="369" height="277" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1057" y="579" font-size="18" font-weight="700" fill="#17191f">Manager confirmation</text>
+  <text x="1057" y="604" font-size="13" font-weight="400" fill="#687080">Confirm learner judgement and final review boundary.</text>
+  <text x="1057" y="620" font-size="12" font-weight="700" fill="#17191f">Override reason</text>
+  <rect x="1057" y="631" width="321" height="67" rx="7" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1071" y="657" font-size="12" font-weight="400" fill="#687080">Required if any suggested owner changes</text>
+  <text x="1057" y="724" font-size="12" font-weight="400" fill="#687080">Final output cannot publish before your review.</text>
+  <rect x="1057" y="747" width="321" height="43" rx="8" fill="#612fff"/>
+  <text x="1217.5" y="774" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Confirm allocation &amp; assign task</text>
+  <text x="274" y="863" font-size="12" font-weight="400" fill="#687080">Illustrative, de-identified task · Learning allocation does not change business approval rights</text>
+  <text x="1330" y="863" font-size="12" font-weight="400" fill="#687080" text-anchor="end">01 / 04</text>
 </svg>

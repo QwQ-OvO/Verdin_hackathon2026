@@ -1,23 +1,71 @@
+<?xml version="1.0" ?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
-  <style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;fill:#17191f}.muted{fill:#737987}.small{font-size:13px}.label{font-size:12px;font-weight:700;letter-spacing:1px}.body{font-size:15px}.bold{font-weight:700}.white{fill:#fff}.purple{fill:#612fff}</style>
-  <rect width="1440" height="900" fill="#f6f7fa"/><rect width="232" height="900" fill="#fff"/><path d="M232 0V900" stroke="#e6e8ee"/>
-  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/><text x="44" y="53" text-anchor="middle" class="white bold" font-size="20">A</text><text x="73" y="52" font-size="18" font-weight="700">apprentice</text><text x="27" y="91" class="muted small">AIRWALLEX · INTERNAL CONCEPT</text>
-  <text x="28" y="139" class="muted label">MY WORK</text><rect x="16" y="158" width="200" height="44" rx="9" fill="#f1ebff"/><rect x="16" y="158" width="4" height="44" rx="2" fill="#612fff"/><text x="45" y="186" class="purple bold body">我的任务</text><text x="45" y="238" class="muted body">学习证据</text><text x="45" y="287" class="muted body">已完成</text>
-  <path d="M24 815H208" stroke="#e7e8ed"/><circle cx="47" cy="852" r="18" fill="#e9e0ff"/><text x="47" y="857" text-anchor="middle" class="purple bold small">林</text><text x="76" y="848" class="bold small">林分析师</text><text x="76" y="866" class="muted" font-size="11">Product · Junior</text>
-  <text x="274" y="48" class="muted small">我的任务  /  OB-0929  /  首次判断</text><rect x="1268" y="27" width="134" height="38" rx="8" fill="#fff" stroke="#dfe1e7"/><text x="1335" y="51" text-anchor="middle" class="small bold">任务说明</text>
-  <text x="274" y="107" font-size="29" font-weight="700">哪些开户反馈值得优先调查？</text><text x="274" y="138" class="muted body">先形成自己的判断并引用原始证据。提交后才能查看 AI 的证据检查。</text>
-  <rect x="274" y="160" width="1128" height="64" rx="11" fill="#f1ebff"/><circle cx="303" cy="192" r="12" fill="#612fff"/><text x="303" y="197" text-anchor="middle" class="white bold small">1</text><text x="327" y="197" class="purple bold body">当前阶段：首次判断</text><text x="723" y="197" class="muted small">目标能力：识别问题模式</text><text x="1132" y="197" class="muted small">截止 10 月 2 日 17:00</text>
-  <rect x="274" y="244" width="525" height="570" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="298" y="281" font-size="18" font-weight="700">反馈材料</text><text x="298" y="307" class="muted small">48 条脱敏反馈 · AI 已整理重复项 · 可查看全部原文</text>
-  <rect x="298" y="328" width="477" height="37" rx="8" fill="#f6f7fa"/><text x="315" y="352" class="muted small">搜索反馈 ID、关键词或流程阶段</text>
-  <rect x="298" y="385" width="477" height="104" rx="9" fill="#fff" stroke="#e1e3e9"/><rect x="312" y="399" width="61" height="21" rx="10" fill="#e8f7f1"/><text x="343" y="414" text-anchor="middle" fill="#087656" font-size="11" font-weight="700">原始反馈</text><text x="388" y="414" class="muted small">FB-014 · 验证阶段</text><text x="312" y="445" class="body">“上传营业执照后页面一直转圈，</text><text x="312" y="468" class="body">我不知道资料是否已经提交成功。”</text>
-  <rect x="298" y="499" width="477" height="104" rx="9" fill="#fff" stroke="#e1e3e9"/><rect x="312" y="513" width="61" height="21" rx="10" fill="#e8f7f1"/><text x="343" y="528" text-anchor="middle" fill="#087656" font-size="11" font-weight="700">原始反馈</text><text x="388" y="528" class="muted small">FB-021 · 验证阶段</text><text x="312" y="559" class="body">“资料交上去三天了，没有看到进度。</text><text x="312" y="582" class="body">不清楚下一步还需要做什么。”</text>
-  <rect x="298" y="613" width="477" height="104" rx="9" fill="#fff" stroke="#e1e3e9"/><rect x="312" y="627" width="61" height="21" rx="10" fill="#e8f7f1"/><text x="343" y="642" text-anchor="middle" fill="#087656" font-size="11" font-weight="700">原始反馈</text><text x="388" y="642" class="muted small">FB-036 · 账户激活</text><text x="312" y="673" class="body">“账户已通过验证，但首次收款设置的</text><text x="312" y="696" class="body">提示让我误以为还不能使用。”</text>
-  <text x="298" y="755" class="purple bold small">查看全部原始反馈与整理映射  →</text><text x="298" y="787" class="muted small">整理结果不替代原文；反馈可按 ID 引用。</text>
-  <rect x="817" y="244" width="585" height="570" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="842" y="281" font-size="18" font-weight="700">我的首次判断</text><text x="842" y="307" class="muted small">请提出两个值得优先调查的问题，并写出支持与反对证据。</text>
-  <text x="842" y="348" class="bold small">你观察到哪些问题模式？</text><rect x="842" y="362" width="535" height="93" rx="8" fill="#fff" stroke="#dfe2e8"/><text x="857" y="389" class="muted small">例如：哪些反馈描述的是同一障碍？它们发生在什么阶段？</text>
-  <text x="842" y="488" class="bold small">优先调查问题 1</text><rect x="842" y="502" width="535" height="75" rx="8" fill="#fff" stroke="#dfe2e8"/><text x="857" y="529" class="muted small">问题、优先级理由及原始反馈 ID</text>
-  <text x="842" y="610" class="bold small">优先调查问题 2</text><rect x="842" y="624" width="535" height="75" rx="8" fill="#fff" stroke="#dfe2e8"/><text x="857" y="651" class="muted small">问题、优先级理由及原始反馈 ID</text>
-  <rect x="842" y="719" width="535" height="34" rx="7" fill="#f6f7fa"/><text x="857" y="741" class="muted small">AI 结论当前锁定；提交首次判断后开放证据检查。</text>
-  <rect x="1147" y="765" width="230" height="44" rx="8" fill="#612fff"/><text x="1262" y="793" text-anchor="middle" class="white bold small">提交首次判断  →</text>
-  <text x="274" y="862" class="muted small">演示概念稿 · 关键判断由新人亲自完成</text><text x="1330" y="862" text-anchor="end" class="muted small">02 / 04</text>
+  <style>text{font-family:Inter,Arial,sans-serif}</style>
+  <rect x="0" y="0" width="1440" height="900" rx="0" fill="#f6f7fa"/>
+  <rect x="0" y="0" width="232" height="900" rx="0" fill="#fff"/>
+  <path d="M232 0V900" stroke="#e2e5ec"/>
+  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/>
+  <text x="44" y="53" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">A</text>
+  <text x="73" y="52" font-size="18" font-weight="700" fill="#17191f">apprentice</text>
+  <text x="27" y="91" font-size="11" font-weight="400" fill="#687080">AIRWALLEX · PRODUCT CONCEPT</text>
+  <text x="28" y="139" font-size="12" font-weight="700" fill="#687080">LEARNER</text>
+  <rect x="16" y="158" width="200" height="43" rx="8" fill="#f1ebff"/>
+  <rect x="16" y="158" width="4" height="43" rx="2" fill="#612fff"/>
+  <text x="44" y="186" font-size="14" font-weight="700" fill="#612fff">My task</text>
+  <text x="44" y="235" font-size="14" font-weight="400" fill="#687080">Learning evidence</text>
+  <text x="44" y="284" font-size="14" font-weight="400" fill="#687080">Completed work</text>
+  <path d="M24 815H208" stroke="#e2e5ec"/>
+  <rect x="29" y="834" width="36" height="36" rx="18" fill="#e9e0ff"/>
+  <text x="47" y="857" font-size="13" font-weight="700" fill="#612fff" text-anchor="middle">L</text>
+  <text x="76" y="848" font-size="13" font-weight="700" fill="#17191f">Junior Analyst</text>
+  <text x="76" y="866" font-size="11" font-weight="400" fill="#687080">Learner workspace</text>
+  <text x="274" y="48" font-size="13" font-weight="400" fill="#687080">Learner workspace  /  OB-0929  /  First judgement</text>
+  <text x="274" y="108" font-size="29" font-weight="700" fill="#17191f">Which onboarding issues deserve investigation?</text>
+  <text x="274" y="138" font-size="14" font-weight="400" fill="#687080">Read original feedback, decide on two priorities, and cite evidence before seeing AI conclusions.</text>
+  <rect x="274" y="160" width="1128" height="62" rx="10" fill="#f1ebff"/>
+  <rect x="291" y="177" width="102" height="28" rx="14" fill="#f1ebff"/>
+  <text x="342.0" y="196" font-size="12" font-weight="700" fill="#612fff" text-anchor="middle">STAGE 1</text>
+  <text x="406" y="198" font-size="15" font-weight="700" fill="#612fff">First judgement</text>
+  <text x="720" y="198" font-size="12" font-weight="400" fill="#687080">Target: user insight · due 2 Oct, 17:00</text>
+  <text x="1146" y="198" font-size="12" font-weight="700" fill="#612fff">Manager review required</text>
+  <rect x="274" y="241" width="526" height="573" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="298" y="279" font-size="18" font-weight="700" fill="#17191f">Source material</text>
+  <text x="298" y="304" font-size="13" font-weight="400" fill="#687080">De-identified demo set · AI removed duplicates, not judgement.</text>
+  <rect x="298" y="323" width="478" height="38" rx="7" fill="#f6f7fa"/>
+  <text x="312" y="348" font-size="12" font-weight="400" fill="#687080">Search source ID or stage</text>
+  <rect x="298" y="380" width="478" height="98" rx="8" fill="#fff" stroke="#e2e5ec"/>
+  <text x="313" y="404" font-size="12" font-weight="700" fill="#687080">FB-014 · document upload</text>
+  <text x="313" y="433" font-size="14" font-weight="400" fill="#17191f">“After upload the screen kept spinning.</text>
+  <text x="313" y="456" font-size="14" font-weight="400" fill="#17191f">I could not tell if the file was submitted.”</text>
+  <rect x="298" y="491" width="478" height="98" rx="8" fill="#fff" stroke="#e2e5ec"/>
+  <text x="313" y="515" font-size="12" font-weight="700" fill="#687080">FB-021 · verification progress</text>
+  <text x="313" y="544" font-size="14" font-weight="400" fill="#17191f">“Three days later I still cannot see progress</text>
+  <text x="313" y="567" font-size="14" font-weight="400" fill="#17191f">or what I need to do next.”</text>
+  <rect x="298" y="602" width="478" height="98" rx="8" fill="#fff" stroke="#e2e5ec"/>
+  <text x="313" y="626" font-size="12" font-weight="700" fill="#687080">FB-036 · account activation</text>
+  <text x="313" y="655" font-size="14" font-weight="400" fill="#17191f">“Verification passed, but the first-payment</text>
+  <text x="313" y="678" font-size="14" font-weight="400" fill="#17191f">setup message suggests I cannot use it.”</text>
+  <rect x="298" y="724" width="478" height="56" rx="7" fill="#f8f9fb"/>
+  <text x="313" y="747" font-size="12" font-weight="700" fill="#17191f">AI organisation: duplicate group A → FB-014, FB-027</text>
+  <text x="313" y="768" font-size="12" font-weight="400" fill="#612fff">Open every original before citing it  →</text>
+  <rect x="819" y="241" width="583" height="573" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="843" y="279" font-size="18" font-weight="700" fill="#17191f">My first judgement</text>
+  <text x="843" y="304" font-size="13" font-weight="400" fill="#687080">The first submission is saved as an immutable version.</text>
+  <text x="844" y="335" font-size="12" font-weight="700" fill="#17191f">Problem patterns you see</text>
+  <rect x="844" y="349" width="533" height="82" rx="7" fill="#fff" stroke="#e2e5ec"/>
+  <text x="858" y="376" font-size="12" font-weight="400" fill="#687080">Which feedback describes the same obstacle?</text>
+  <text x="844" y="462" font-size="12" font-weight="700" fill="#17191f">Priority 1 · issue, reason, source IDs</text>
+  <rect x="844" y="476" width="533" height="76" rx="7" fill="#fff" stroke="#e2e5ec"/>
+  <text x="858" y="503" font-size="12" font-weight="400" fill="#687080">Cite supporting and conflicting feedback IDs</text>
+  <text x="844" y="583" font-size="12" font-weight="700" fill="#17191f">Priority 2 · issue, reason, source IDs</text>
+  <rect x="844" y="597" width="533" height="76" rx="7" fill="#fff" stroke="#e2e5ec"/>
+  <text x="858" y="624" font-size="12" font-weight="400" fill="#687080">Cite supporting and conflicting feedback IDs</text>
+  <rect x="844" y="696" width="533" height="43" rx="7" fill="#f8f5ff"/>
+  <text x="857" y="716" font-size="12" font-weight="700" fill="#612fff">Need a question hint? Ask once; it is logged for your manager.</text>
+  <text x="857" y="732" font-size="11" font-weight="400" fill="#687080">No suggested categories or final answer before submission.</text>
+  <text x="844" y="767" font-size="12" font-weight="700" fill="#687080">AI conclusions locked until first submission.</text>
+  <rect x="1147" y="752" width="230" height="43" rx="8" fill="#612fff"/>
+  <text x="1262.0" y="779" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Submit first judgement  →</text>
+  <text x="274" y="863" font-size="12" font-weight="400" fill="#687080">Illustrative, de-identified task · Learning allocation does not change business approval rights</text>
+  <text x="1330" y="863" font-size="12" font-weight="400" fill="#687080" text-anchor="end">02 / 04</text>
 </svg>

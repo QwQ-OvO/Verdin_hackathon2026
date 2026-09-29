@@ -1,26 +1,77 @@
+<?xml version="1.0" ?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
-  <style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;fill:#17191f}.muted{fill:#737987}.small{font-size:13px}.label{font-size:12px;font-weight:700;letter-spacing:1px}.body{font-size:15px}.bold{font-weight:700}.white{fill:#fff}.purple{fill:#612fff}</style>
-  <rect width="1440" height="900" fill="#f6f7fa"/><rect width="232" height="900" fill="#fff"/><path d="M232 0V900" stroke="#e6e8ee"/>
-  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/><text x="44" y="53" text-anchor="middle" class="white bold" font-size="20">A</text><text x="73" y="52" font-size="18" font-weight="700">apprentice</text><text x="27" y="91" class="muted small">AIRWALLEX · INTERNAL CONCEPT</text>
-  <text x="28" y="139" class="muted label">WORKSPACE</text><text x="45" y="186" class="muted body">任务分工</text><text x="45" y="238" class="muted body">团队任务</text><text x="45" y="287" class="muted body">能力证据</text><rect x="16" y="307" width="200" height="44" rx="9" fill="#f1ebff"/><rect x="16" y="307" width="4" height="44" rx="2" fill="#612fff"/><text x="45" y="335" class="purple bold body">审核记录</text>
-  <path d="M24 815H208" stroke="#e7e8ed"/><circle cx="47" cy="852" r="18" fill="#e9e0ff"/><text x="47" y="857" text-anchor="middle" class="purple bold small">陈</text><text x="76" y="848" class="bold small">陈主管</text><text x="76" y="866" class="muted" font-size="11">Product · Manager</text>
-  <text x="274" y="48" class="muted small">审核记录  /  OB-0929  /  主管审核</text>
-  <text x="274" y="107" font-size="29" font-weight="700">审核结论，也审核判断过程</text><text x="274" y="138" class="muted body">商户开户与验证流程反馈 · 林分析师 · 最终业务结论须经主管批准</text>
-  <rect x="274" y="160" width="1128" height="64" rx="11" fill="#fff" stroke="#e5e7ec"/><rect x="292" y="178" width="73" height="27" rx="13" fill="#fff2df"/><text x="329" y="196" text-anchor="middle" fill="#9b6417" font-size="12" font-weight="700">待审核</text><text x="385" y="197" class="bold small">首次判断 09:42</text><text x="583" y="197" class="bold small">修订提交 10:16</text><text x="803" y="197" class="bold small">提示使用 1 次</text><text x="1082" y="197" class="muted small">任务来源：Product Onboarding</text>
-  <rect x="274" y="243" width="767" height="572" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="299" y="279" font-size="18" font-weight="700">判断轨迹</text><text x="299" y="305" class="muted small">按时间顺序展示；首次版本与提示记录不可覆盖。</text>
-  <path d="M320 348V737" stroke="#d8caff" stroke-width="2"/>
-  <circle cx="320" cy="367" r="10" fill="#612fff"/><text x="346" y="371" class="bold body">09:42  首次判断</text><rect x="346" y="388" width="665" height="97" rx="9" fill="#f8f9fb"/>
-  <text x="362" y="416" class="small">优先调查：①资料上传后的提交反馈  ②验证进度可见性</text><text x="362" y="441" class="muted small">引用 FB-014、FB-018、FB-021、FB-024、FB-027</text><text x="362" y="466" class="muted small">提交前使用一级反思问题 1 次 · AI 结论此前未展示</text>
-  <circle cx="320" cy="523" r="10" fill="#a985ff"/><text x="346" y="527" class="bold body">09:51  AI 证据检查</text><rect x="346" y="544" width="665" height="79" rx="9" fill="#f7f2ff"/>
-  <text x="362" y="572" class="small">提醒核对 FB-036 的流程阶段；FB-018 与初步假设存在差异。</text><text x="362" y="600" class="muted small">反馈类型：可能遗漏 · 相互矛盾的证据</text>
-  <circle cx="320" cy="661" r="10" fill="#612fff"/><text x="346" y="665" class="bold body">10:16  修订版本</text><rect x="346" y="682" width="665" height="101" rx="9" fill="#f8f9fb"/>
-  <text x="362" y="710" class="small">将“上传反馈”与“后续进度”拆为不同阶段，保留两项调查建议。</text><text x="362" y="735" class="muted small">修改原因：FB-018 显示上传成功提示正常，问题可能发生在下一步。</text><text x="362" y="761" class="purple bold small">查看版本差异与原始反馈  →</text>
-  <rect x="1059" y="243" width="343" height="336" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="1084" y="279" font-size="18" font-weight="700">主管审核</text>
-  <text x="1084" y="319" class="bold small">判断质量</text><rect x="1084" y="332" width="293" height="39" rx="7" fill="#f7f8fa"/><text x="1098" y="357" class="small">基本准确，仍需核实阶段差异  ⌄</text>
-  <text x="1084" y="410" class="bold small">反馈意见</text><rect x="1084" y="423" width="293" height="91" rx="8" fill="#fff" stroke="#dfe2e8"/><text x="1098" y="450" class="small">证据引用清楚；请补充不同商户</text><text x="1098" y="475" class="small">类型是否出现同一问题。</text>
-  <rect x="1084" y="531" width="137" height="35" rx="7" fill="#fff" stroke="#dfe2e8"/><text x="1153" y="554" text-anchor="middle" class="small bold">退回修改</text><rect x="1231" y="531" width="146" height="35" rx="7" fill="#612fff"/><text x="1304" y="554" text-anchor="middle" class="white small bold">批准业务结论</text>
-  <rect x="1059" y="596" width="343" height="219" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="1084" y="632" font-size="18" font-weight="700">能力证据 · 下一任务</text>
-  <text x="1084" y="663" class="muted small">本次：有提示的首次判断，能依据反馈修订。</text><rect x="1084" y="681" width="293" height="62" rx="8" fill="#f1ebff"/><text x="1099" y="706" class="purple bold small">建议：保持一级提示</text><text x="1099" y="728" class="muted small">下一项新情境任务再验证独立性</text>
-  <text x="1084" y="781" class="muted small">本次交付批准 ≠ 能力已掌握</text>
-  <text x="274" y="862" class="muted small">演示概念稿 · 业务交付与能力判断分别记录</text><text x="1330" y="862" text-anchor="end" class="muted small">04 / 04</text>
+  <style>text{font-family:Inter,Arial,sans-serif}</style>
+  <rect x="0" y="0" width="1440" height="900" rx="0" fill="#f6f7fa"/>
+  <rect x="0" y="0" width="232" height="900" rx="0" fill="#fff"/>
+  <path d="M232 0V900" stroke="#e2e5ec"/>
+  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/>
+  <text x="44" y="53" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">A</text>
+  <text x="73" y="52" font-size="18" font-weight="700" fill="#17191f">apprentice</text>
+  <text x="27" y="91" font-size="11" font-weight="400" fill="#687080">AIRWALLEX · PRODUCT CONCEPT</text>
+  <text x="28" y="139" font-size="12" font-weight="700" fill="#687080">MANAGER</text>
+  <text x="44" y="186" font-size="14" font-weight="400" fill="#687080">Task allocation</text>
+  <text x="44" y="235" font-size="14" font-weight="400" fill="#687080">Team tasks</text>
+  <text x="44" y="284" font-size="14" font-weight="400" fill="#687080">Capability evidence</text>
+  <rect x="16" y="305" width="200" height="43" rx="8" fill="#f1ebff"/>
+  <rect x="16" y="305" width="4" height="43" rx="2" fill="#612fff"/>
+  <text x="44" y="333" font-size="14" font-weight="700" fill="#612fff">Review trail</text>
+  <path d="M24 815H208" stroke="#e2e5ec"/>
+  <rect x="29" y="834" width="36" height="36" rx="18" fill="#e9e0ff"/>
+  <text x="47" y="857" font-size="13" font-weight="700" fill="#612fff" text-anchor="middle">M</text>
+  <text x="76" y="848" font-size="13" font-weight="700" fill="#17191f">Product Manager</text>
+  <text x="76" y="866" font-size="11" font-weight="400" fill="#687080">Manager workspace</text>
+  <text x="274" y="48" font-size="13" font-weight="400" fill="#687080">Manager workspace  /  OB-0929  /  Manager review</text>
+  <text x="274" y="108" font-size="29" font-weight="700" fill="#17191f">Review the output and the judgement trail</text>
+  <text x="274" y="138" font-size="14" font-weight="400" fill="#687080">Approve the business result and record capability evidence as separate decisions.</text>
+  <rect x="274" y="160" width="1128" height="62" rx="10" fill="#fff" stroke="#e2e5ec"/>
+  <rect x="291" y="177" width="115" height="28" rx="14" fill="#fff2df"/>
+  <text x="348.5" y="196" font-size="12" font-weight="700" fill="#986014" text-anchor="middle">AWAITING REVIEW</text>
+  <text x="423" y="198" font-size="12" font-weight="700" fill="#17191f">Version 1: 09:42 · AI check: 09:51 · Revision: 10:16</text>
+  <text x="1078" y="198" font-size="12" font-weight="400" fill="#687080">Source: demo Product Onboarding task</text>
+  <rect x="274" y="241" width="756" height="573" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="298" y="279" font-size="18" font-weight="700" fill="#17191f">Judgement trail</text>
+  <text x="298" y="304" font-size="13" font-weight="400" fill="#687080">Original sources, first version, help and revision are retained.</text>
+  <path d="M304 340V751" stroke="#d8caff"/>
+  <rect x="297" y="342" width="15" height="15" rx="8" fill="#612fff"/>
+  <text x="332" y="355" font-size="14" font-weight="700" fill="#17191f">09:42  First judgement</text>
+  <rect x="332" y="369" width="673" height="93" rx="8" fill="#f8f9fb"/>
+  <text x="347" y="400" font-size="13" font-weight="400" fill="#17191f">Two priorities: upload confirmation; verification progress.</text>
+  <text x="347" y="428" font-size="12" font-weight="400" fill="#687080">Cited FB-014, 018, 021, 024, 027 · pre-submit question used once.</text>
+  <rect x="297" y="496" width="15" height="15" rx="8" fill="#612fff"/>
+  <text x="332" y="509" font-size="14" font-weight="700" fill="#17191f">09:51  AI evidence check</text>
+  <rect x="332" y="523" width="673" height="93" rx="8" fill="#f8f9fb"/>
+  <text x="347" y="554" font-size="13" font-weight="400" fill="#17191f">Asked about FB-036 stage and FB-018 contradiction.</text>
+  <text x="347" y="582" font-size="12" font-weight="400" fill="#687080">Post-submit check; no AI conclusion was shown before Version 1.</text>
+  <rect x="297" y="650" width="15" height="15" rx="8" fill="#612fff"/>
+  <text x="332" y="663" font-size="14" font-weight="700" fill="#17191f">10:16  Learner revision</text>
+  <rect x="332" y="677" width="673" height="93" rx="8" fill="#f8f9fb"/>
+  <text x="347" y="708" font-size="13" font-weight="400" fill="#17191f">Separated upload confirmation from later status.</text>
+  <text x="347" y="736" font-size="12" font-weight="400" fill="#687080">Reasoned change cites FB-018; original first version remains visible.</text>
+  <text x="332" y="786" font-size="12" font-weight="700" fill="#612fff">Open version diff and original feedback  →</text>
+  <rect x="1048" y="241" width="354" height="320" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1072" y="279" font-size="18" font-weight="700" fill="#17191f">1 · Business review</text>
+  <text x="1072" y="304" font-size="13" font-weight="400" fill="#687080">Manager owns the final work output.</text>
+  <text x="1072" y="327" font-size="12" font-weight="700" fill="#17191f">Evidence quality</text>
+  <rect x="1072" y="340" width="306" height="39" rx="6" fill="#f6f7fa"/>
+  <text x="1085" y="365" font-size="12" font-weight="400" fill="#17191f">Check stage differences  ⌄</text>
+  <text x="1072" y="411" font-size="12" font-weight="700" fill="#17191f">Review feedback</text>
+  <rect x="1072" y="424" width="306" height="82" rx="7" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1085" y="452" font-size="12" font-weight="400" fill="#17191f">Citations are clear. Check whether</text>
+  <text x="1085" y="475" font-size="12" font-weight="400" fill="#17191f">merchant segments differ.</text>
+  <rect x="1072" y="517" width="143" height="43" rx="8" fill="#fff" stroke="#d9dce5"/>
+  <text x="1143.5" y="544" font-size="13" font-weight="700" fill="#17191f" text-anchor="middle">Return for changes</text>
+  <rect x="1225" y="517" width="153" height="43" rx="8" fill="#612fff"/>
+  <text x="1301.5" y="544" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Approve output</text>
+  <rect x="1048" y="579" width="354" height="235" rx="14" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1072" y="617" font-size="18" font-weight="700" fill="#17191f">2 · Capability evidence</text>
+  <text x="1072" y="642" font-size="13" font-weight="400" fill="#687080">Approval of output does not certify mastery.</text>
+  <text x="1072" y="656" font-size="11" font-weight="400" fill="#687080">Prompted first judgement; reasoned revision.</text>
+  <rect x="1072" y="674" width="306" height="59" rx="7" fill="#f1ebff"/>
+  <text x="1085" y="698" font-size="12" font-weight="700" fill="#612fff">Proposed next support: level 1</text>
+  <text x="1085" y="720" font-size="11" font-weight="400" fill="#687080">Validate on a new real task later.</text>
+  <rect x="1072" y="742" width="306" height="32" rx="6" fill="#fff" stroke="#e2e5ec"/>
+  <text x="1084" y="763" font-size="11" font-weight="700" fill="#17191f">Manager choice: keep / reduce / increase  ⌄</text>
+  <text x="1072" y="798" font-size="11" font-weight="700" fill="#612fff">Save evidence and next-support decision  →</text>
+  <text x="274" y="863" font-size="12" font-weight="400" fill="#687080">Illustrative, de-identified task · Learning allocation does not change business approval rights</text>
+  <text x="1330" y="863" font-size="12" font-weight="400" fill="#687080" text-anchor="end">04 / 04</text>
 </svg>
