@@ -27,6 +27,10 @@ Learning participation never grants authority to publish a conclusion or change 
 
 ## Product flows
 
+**MVP product architecture:**
+
+![Product architecture](product%20design/01-product-architecture.svg)
+
 **Learning arrangement and execution authority are separate decisions:**
 
 ![Work allocation and authority](product%20design/02-work-allocation-and-authority.svg)
@@ -35,7 +39,7 @@ Learning participation never grants authority to publish a conclusion or change 
 
 ![Real-work learning loop](product%20design/03-real-work-learning-loop.svg)
 
-[Product architecture](product%20design/01-product-architecture.svg) · [Entry to the first real task](product%20design/04-first-real-task-entry.svg)
+[Entry to the first real task](product%20design/04-first-real-task-entry.svg)
 
 ## Tech and current progress
 
