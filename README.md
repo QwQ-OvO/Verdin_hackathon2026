@@ -49,10 +49,10 @@ Learning participation never grants authority to publish a conclusion or change 
 
 | Area | Day 3 demo design / current status | Enterprise production direction |
 | --- | --- | --- |
-| Frontend | React, TypeScript and Vite are planned for four manager and learner screens. Four English static mockups are complete in [`ui/`](ui/). | Integrate with existing task systems and enterprise identity; refine accessibility and role-based views. |
+| Frontend | React, TypeScript and Vite are planned for four manager and learner screens. Four static layout drafts are complete in [`ui/`](ui/). | Integrate with existing task systems and enterprise identity; refine accessibility and role-based views. |
 | Backend | The Node.js/TypeScript API implements guarded task states, transparent step-level allocation, manager confirmation, a protected first judgement, and controlled hints. Append-only revisions and manager review are planned for Step 5. | Integrate with approval workflows, enforce granular access controls, and retain a reviewable audit trail. |
 | Storage | SQLite persists tasks, source links, allocation decisions, the immutable first judgement, hints and audit events. Revision and review records are planned for Step 5. | Move to managed enterprise storage with retention policies, access logging and backups. |
-| AI | Curated, source-preserving groups and a deterministic hint adapter keep the synthetic demo repeatable. An optional server-side OpenAI Responses adapter is implemented for post-submission hints; `gpt-4o-mini` is the planned live-model candidate, but live hint quality has not been verified. Permissions and allocation constraints remain rule-based. | Evaluate an Australia-hosted, local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Validate quality and data handling; model output remains subject to manager review. |
+| AI | `gpt-4o-mini` is the planned candidate based on expected performance and cost; live quality remains unverified. | Evaluate local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Validate quality and data handling; model output remains subject to manager review. |
 
 The backend currently supports manager allocation, first judgement and controlled hints. Revisions, business approval, capability evidence and later-task validation remain planned; see the [backend development plan](backend/docs/development-plan.md).
 
@@ -68,7 +68,7 @@ $env:DEMO_LEARNER_TOKEN = '<choose-a-different-secret-learner-token>'
 npm start
 ```
 
-The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. The manager can propose and confirm allocation; the learner can start the task, submit a first judgement and request hints using the endpoints in the [demo contract](backend/docs/demo-contract.md). Hints work offline with the synthetic adapter. For optional live post-submission hints, set `OPENAI_API_KEY` and `OPENAI_HINT_MODEL` on the server. Keep the API key out of frontend code and the repository.
+The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. The manager can propose and confirm allocation; the learner can start the task, submit a first judgement and request hints using the endpoints in the [demo contract](backend/docs/demo-contract.md). Hints work offline with the synthetic adapter. For optional live post-submission hints, set `OPENAI_API_KEY` and `OPENAI_HINT_MODEL` on the server.
 
 The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Run `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
 
