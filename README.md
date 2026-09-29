@@ -41,15 +41,31 @@ Learning participation never grants authority to publish a conclusion or change 
 
 [Entry to the first real task](product%20design/04-first-real-task-entry.svg)
 
-## Tech and current progress
+## Current progress
 
-| Area | Day 3 MVP / current status | Enterprise direction |
+| Area | Completed | Next |
 | --- | --- | --- |
-| Frontend | **Planned:** React, TypeScript and Vite for four manager and learner screens. Four English static mockups are complete in [`ui/`](ui/). | Integrate with existing task systems and enterprise identity; refine accessibility and role-based views. |
-| Backend | **Planned:** Node.js API with transparent, step-level allocation rules. Role and task-state checks will keep AI conclusions hidden until the learner's first judgement is saved. The manager confirms allocation and final business use. | Integrate with approval workflows, enforce granular access controls, and retain a reviewable audit trail. |
-| Storage | **Planned:** SQLite will store task sources, allocation decisions, original evidence links, immutable first judgements, hints, revisions and manager reviews. | Move to managed enterprise storage with retention policies, access logging and backups. |
-| AI | **Planned:** Server-side `gpt-4o-mini` calls for material organisation, limited hints and post-submission evidence checks. Business permissions and allocation constraints remain rule-based. | Evaluate an Australia-hosted, local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Model output remains subject to manager review. |
-| Progress and delivery | **Complete:** user story, frontend and backend specifications, four UI mockups and four product diagrams. **Next:** implement and test one real-task learning loop; no working application or live AI integration yet. | Use agile iterations: test the first loop with managers and learners, measure delivery quality, help used and review time, then expand roles and integrations based on evidence. |
+| Product design | User story, frontend and backend specifications, four product diagrams, and four English UI mockups in [`ui/`](ui/). | Validate the learning loop with a manager and learner. |
+| Backend Step 0 | English [demo contract](backend/docs/demo-contract.md), manager rubric, and clearly labelled synthetic task, user, and feedback fixtures. | Keep the contract aligned with implementation changes. |
+| Backend Step 1 | Node.js/TypeScript API, SQLite migrations and seed import, guarded task-state transitions, version checks, append-only audit events, and a role-filtered `GET /tasks/:id`. Eight behavior tests and TypeScript checking pass. | Implement transparent step-level allocation and manager confirmation. |
+| Frontend | Static mockups show manager assignment, learner judgment, revision, and manager review. | Build the four React/TypeScript screens and connect them to the API. |
+| AI | No live model integration. Source-preserving organization groups are curated demo data. | Add server-side material organization, limited hints, and post-submission evidence checks after the first-judgment boundary is enforced. |
+
+The current backend is a runnable first slice, not yet an end-to-end learning loop. Business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
+
+### Run the current backend
+
+Requires Node.js 22.21 or newer. Node 22 currently labels its built-in SQLite module experimental.
+
+```powershell
+cd backend
+npm install
+$env:DEMO_MANAGER_TOKEN = '<choose-a-secret-manager-token>'
+$env:DEMO_LEARNER_TOKEN = '<choose-a-different-secret-learner-token>'
+npm start
+```
+
+The API listens on `127.0.0.1:3001` by default. `GET /health` is public; `GET /tasks/TASK-ONB-001` requires one of the bearer tokens. The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Use `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
 
 ## Day 3 MVP
 
