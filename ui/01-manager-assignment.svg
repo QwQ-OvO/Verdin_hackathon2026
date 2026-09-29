@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <defs>
+    <style>
+      text{font-family:'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;fill:#17191f} .muted{fill:#737987} .small{font-size:13px} .label{font-size:12px;font-weight:700;letter-spacing:1px} .title{font-size:30px;font-weight:700} .body{font-size:15px} .bold{font-weight:700} .white{fill:#fff} .purple{fill:#612fff}
+    </style>
+  </defs>
+  <rect width="1440" height="900" fill="#f6f7fa"/>
+  <rect width="232" height="900" fill="#fff"/>
+  <path d="M232 0V900" stroke="#e6e8ee"/>
+  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/><text x="44" y="53" text-anchor="middle" class="white bold" font-size="20">A</text>
+  <text x="73" y="52" font-size="18" font-weight="700">apprentice</text><text x="27" y="91" class="muted small">AIRWALLEX · INTERNAL CONCEPT</text>
+  <text x="28" y="139" class="muted label">WORKSPACE</text>
+  <rect x="16" y="158" width="200" height="44" rx="9" fill="#f1ebff"/><rect x="16" y="158" width="4" height="44" rx="2" fill="#612fff"/><text x="45" y="186" class="purple bold body">任务分工</text>
+  <text x="45" y="238" class="muted body">团队任务</text><text x="45" y="287" class="muted body">能力证据</text><text x="45" y="336" class="muted body">审核记录</text>
+  <path d="M24 815H208" stroke="#e7e8ed"/><circle cx="47" cy="852" r="18" fill="#e9e0ff"/><text x="47" y="857" text-anchor="middle" class="purple bold small">陈</text><text x="76" y="848" class="bold small">陈主管</text><text x="76" y="866" class="muted" font-size="11">Product · Manager</text>
+  <text x="274" y="48" class="muted small">团队任务  /  新建任务  /  分工确认</text>
+  <rect x="1257" y="27" width="145" height="38" rx="8" fill="#fff" stroke="#dfe1e7"/><text x="1330" y="51" text-anchor="middle" class="small bold">保存草稿</text>
+  <text x="274" y="112" class="title">确认这项工作的学习分工</text>
+  <text x="274" y="141" class="muted body">系统按步骤提出建议；主管决定新人参与的位置与最终审核责任。</text>
+  <rect x="274" y="169" width="1128" height="88" rx="12" fill="#fff" stroke="#e5e7ec"/>
+  <rect x="294" y="190" width="79" height="24" rx="12" fill="#e8f7f1"/><text x="333" y="207" text-anchor="middle" fill="#087656" font-size="11" font-weight="700">真实工作</text>
+  <text x="385" y="209" class="bold body">商户开户与验证流程：近期反馈分析</text>
+  <text x="294" y="237" class="muted small">来源：Product Onboarding 待办 · 反馈批次 OB-0929 · 48 条脱敏反馈</text>
+  <text x="1146" y="208" class="muted small">截止时间</text><text x="1146" y="235" class="bold body">10 月 2 日 17:00</text>
+  <rect x="274" y="280" width="742" height="537" rx="14" fill="#fff" stroke="#e5e7ec"/>
+  <text x="299" y="315" font-size="18" font-weight="700">逐步骤分工建议</text><text x="299" y="339" class="muted small">目标能力：从零散反馈中识别问题模式，并说明优先级依据</text>
+  <path d="M299 361H991" stroke="#eceef2"/>
+  <text x="299" y="390" class="muted label">工作步骤</text><text x="622" y="390" class="muted label">建议负责人</text><text x="789" y="390" class="muted label">判断依据</text>
+  <path d="M299 405H991" stroke="#eceef2"/>
+  <text x="299" y="442" class="bold body">01  整理反馈与产品背景</text><text x="299" y="466" class="muted small">去重、标注来源，保留原始反馈</text>
+  <rect x="610" y="421" width="122" height="30" rx="15" fill="#f1ebff"/><text x="671" y="441" text-anchor="middle" class="purple bold small">AI 处理</text>
+  <text x="789" y="442" class="small">重复整理；自动化收益高</text><text x="789" y="463" class="muted small">每条摘要可回溯原文</text>
+  <path d="M299 490H991" stroke="#eceef2"/>
+  <rect x="288" y="502" width="714" height="106" rx="9" fill="#faf8ff"/>
+  <text x="299" y="535" class="bold body">02  识别问题模式</text><text x="299" y="559" class="muted small">判断哪些反馈指向同一障碍</text>
+  <rect x="610" y="514" width="122" height="30" rx="15" fill="#e6f5ef"/><text x="671" y="534" text-anchor="middle" fill="#087656" font-size="13" font-weight="700">新人判断</text>
+  <text x="789" y="535" class="small">匹配“用户洞察”能力缺口</text><text x="789" y="556" class="muted small">保留可控的真实判断练习</text>
+  <path d="M299 620H991" stroke="#eceef2"/>
+  <text x="299" y="657" class="bold body">03  选择两个调查重点</text><text x="299" y="681" class="muted small">引用原始反馈说明优先级</text>
+  <rect x="610" y="636" width="122" height="30" rx="15" fill="#e6f5ef"/><text x="671" y="656" text-anchor="middle" fill="#087656" font-size="13" font-weight="700">新人判断</text>
+  <text x="789" y="657" class="small">练习权衡证据与影响</text><text x="789" y="678" class="muted small">首次提交前隐藏 AI 结论</text>
+  <path d="M299 706H991" stroke="#eceef2"/>
+  <text x="299" y="743" class="bold body">04  批准结论用于产品决策</text><text x="299" y="767" class="muted small">核实依据并决定后续行动</text>
+  <rect x="610" y="722" width="122" height="30" rx="15" fill="#f0f1f4"/><text x="671" y="742" text-anchor="middle" fill="#525967" font-size="13" font-weight="700">主管审核</text>
+  <text x="789" y="743" class="small">最终业务责任须明确</text><text x="789" y="764" class="muted small">涉及风控改动需另行审批</text>
+  <rect x="1034" y="280" width="368" height="258" rx="14" fill="#fff" stroke="#e5e7ec"/>
+  <text x="1058" y="316" font-size="18" font-weight="700">任务约束</text>
+  <text x="1058" y="357" class="muted small">业务风险</text><text x="1270" y="357" class="bold small">中等 · 可复核</text>
+  <path d="M1058 371H1378" stroke="#eceef2"/>
+  <text x="1058" y="400" class="muted small">材料权限</text><text x="1236" y="400" class="bold small">仅脱敏反馈</text>
+  <path d="M1058 414H1378" stroke="#eceef2"/>
+  <text x="1058" y="443" class="muted small">最终审核人</text><text x="1281" y="443" class="bold small">陈主管</text>
+  <path d="M1058 457H1378" stroke="#eceef2"/>
+  <rect x="1058" y="475" width="320" height="42" rx="8" fill="#fff7e8"/><text x="1070" y="501" fill="#8b5a12" font-size="12">新人无权更改验证或风控规则</text>
+  <rect x="1034" y="554" width="368" height="263" rx="14" fill="#fff" stroke="#e5e7ec"/>
+  <text x="1058" y="590" font-size="18" font-weight="700">主管确认</text>
+  <text x="1058" y="620" class="muted small">可修改建议负责人；改判时记录原因。</text>
+  <rect x="1058" y="643" width="320" height="71" rx="8" fill="#f7f8fa" stroke="#e4e6ec"/><text x="1074" y="669" class="muted small">改判原因（如有）</text><text x="1074" y="694" class="muted small">点击后填写说明…</text>
+  <rect x="1058" y="736" width="320" height="52" rx="9" fill="#612fff"/><text x="1218" y="769" text-anchor="middle" class="white bold body">确认分工并发布任务  →</text>
+  <text x="274" y="862" class="muted small">演示概念稿 · 学习分工不改变现有审批权限</text><text x="1330" y="862" text-anchor="end" class="muted small">01 / 04</text>
+</svg>

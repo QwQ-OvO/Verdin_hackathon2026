@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif;fill:#17191f}.muted{fill:#737987}.small{font-size:13px}.label{font-size:12px;font-weight:700;letter-spacing:1px}.body{font-size:15px}.bold{font-weight:700}.white{fill:#fff}.purple{fill:#612fff}</style>
+  <rect width="1440" height="900" fill="#f6f7fa"/><rect width="232" height="900" fill="#fff"/><path d="M232 0V900" stroke="#e6e8ee"/>
+  <rect x="27" y="30" width="34" height="34" rx="9" fill="#612fff"/><text x="44" y="53" text-anchor="middle" class="white bold" font-size="20">A</text><text x="73" y="52" font-size="18" font-weight="700">apprentice</text><text x="27" y="91" class="muted small">AIRWALLEX · INTERNAL CONCEPT</text>
+  <text x="28" y="139" class="muted label">WORKSPACE</text><text x="45" y="186" class="muted body">任务分工</text><text x="45" y="238" class="muted body">团队任务</text><text x="45" y="287" class="muted body">能力证据</text><rect x="16" y="307" width="200" height="44" rx="9" fill="#f1ebff"/><rect x="16" y="307" width="4" height="44" rx="2" fill="#612fff"/><text x="45" y="335" class="purple bold body">审核记录</text>
+  <path d="M24 815H208" stroke="#e7e8ed"/><circle cx="47" cy="852" r="18" fill="#e9e0ff"/><text x="47" y="857" text-anchor="middle" class="purple bold small">陈</text><text x="76" y="848" class="bold small">陈主管</text><text x="76" y="866" class="muted" font-size="11">Product · Manager</text>
+  <text x="274" y="48" class="muted small">审核记录  /  OB-0929  /  主管审核</text>
+  <text x="274" y="107" font-size="29" font-weight="700">审核结论，也审核判断过程</text><text x="274" y="138" class="muted body">商户开户与验证流程反馈 · 林分析师 · 最终业务结论须经主管批准</text>
+  <rect x="274" y="160" width="1128" height="64" rx="11" fill="#fff" stroke="#e5e7ec"/><rect x="292" y="178" width="73" height="27" rx="13" fill="#fff2df"/><text x="329" y="196" text-anchor="middle" fill="#9b6417" font-size="12" font-weight="700">待审核</text><text x="385" y="197" class="bold small">首次判断 09:42</text><text x="583" y="197" class="bold small">修订提交 10:16</text><text x="803" y="197" class="bold small">提示使用 1 次</text><text x="1082" y="197" class="muted small">任务来源：Product Onboarding</text>
+  <rect x="274" y="243" width="767" height="572" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="299" y="279" font-size="18" font-weight="700">判断轨迹</text><text x="299" y="305" class="muted small">按时间顺序展示；首次版本与提示记录不可覆盖。</text>
+  <path d="M320 348V737" stroke="#d8caff" stroke-width="2"/>
+  <circle cx="320" cy="367" r="10" fill="#612fff"/><text x="346" y="371" class="bold body">09:42  首次判断</text><rect x="346" y="388" width="665" height="97" rx="9" fill="#f8f9fb"/>
+  <text x="362" y="416" class="small">优先调查：①资料上传后的提交反馈  ②验证进度可见性</text><text x="362" y="441" class="muted small">引用 FB-014、FB-018、FB-021、FB-024、FB-027</text><text x="362" y="466" class="muted small">提交前使用一级反思问题 1 次 · AI 结论此前未展示</text>
+  <circle cx="320" cy="523" r="10" fill="#a985ff"/><text x="346" y="527" class="bold body">09:51  AI 证据检查</text><rect x="346" y="544" width="665" height="79" rx="9" fill="#f7f2ff"/>
+  <text x="362" y="572" class="small">提醒核对 FB-036 的流程阶段；FB-018 与初步假设存在差异。</text><text x="362" y="600" class="muted small">反馈类型：可能遗漏 · 相互矛盾的证据</text>
+  <circle cx="320" cy="661" r="10" fill="#612fff"/><text x="346" y="665" class="bold body">10:16  修订版本</text><rect x="346" y="682" width="665" height="101" rx="9" fill="#f8f9fb"/>
+  <text x="362" y="710" class="small">将“上传反馈”与“后续进度”拆为不同阶段，保留两项调查建议。</text><text x="362" y="735" class="muted small">修改原因：FB-018 显示上传成功提示正常，问题可能发生在下一步。</text><text x="362" y="761" class="purple bold small">查看版本差异与原始反馈  →</text>
+  <rect x="1059" y="243" width="343" height="336" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="1084" y="279" font-size="18" font-weight="700">主管审核</text>
+  <text x="1084" y="319" class="bold small">判断质量</text><rect x="1084" y="332" width="293" height="39" rx="7" fill="#f7f8fa"/><text x="1098" y="357" class="small">基本准确，仍需核实阶段差异  ⌄</text>
+  <text x="1084" y="410" class="bold small">反馈意见</text><rect x="1084" y="423" width="293" height="91" rx="8" fill="#fff" stroke="#dfe2e8"/><text x="1098" y="450" class="small">证据引用清楚；请补充不同商户</text><text x="1098" y="475" class="small">类型是否出现同一问题。</text>
+  <rect x="1084" y="531" width="137" height="35" rx="7" fill="#fff" stroke="#dfe2e8"/><text x="1153" y="554" text-anchor="middle" class="small bold">退回修改</text><rect x="1231" y="531" width="146" height="35" rx="7" fill="#612fff"/><text x="1304" y="554" text-anchor="middle" class="white small bold">批准业务结论</text>
+  <rect x="1059" y="596" width="343" height="219" rx="14" fill="#fff" stroke="#e5e7ec"/><text x="1084" y="632" font-size="18" font-weight="700">能力证据 · 下一任务</text>
+  <text x="1084" y="663" class="muted small">本次：有提示的首次判断，能依据反馈修订。</text><rect x="1084" y="681" width="293" height="62" rx="8" fill="#f1ebff"/><text x="1099" y="706" class="purple bold small">建议：保持一级提示</text><text x="1099" y="728" class="muted small">下一项新情境任务再验证独立性</text>
+  <text x="1084" y="781" class="muted small">本次交付批准 ≠ 能力已掌握</text>
+  <text x="274" y="862" class="muted small">演示概念稿 · 业务交付与能力判断分别记录</text><text x="1330" y="862" text-anchor="end" class="muted small">04 / 04</text>
+</svg>
