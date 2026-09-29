@@ -33,7 +33,7 @@ const transitions: Record<TaskEvent, { from: TaskStatus[]; to: TaskStatus; role:
 type TaskRow = {
   id: string; title: string; status: TaskStatus; version: number;
   learner_id: string; reviewer_id: string; is_simulated: number;
-  source_type: string; simulation_notice: string; objective: string;
+  source_record_id: string; source_type: string; simulation_notice: string; objective: string;
   deadline_at: string; capability_id: string; risk_level: string;
 };
 
@@ -44,7 +44,7 @@ export class TaskWorkflowService {
     this.db = db;
   }
 
-  transition(input: { taskId: string; event: TaskEvent; actorId: string; expectedVersion: number }): { id: string; status: TaskStatus; version: number } {
+  transition(input: { taskId: string; event: TaskEvent; actorId: string; expectedVersion: number }, applyRecords?: () => void): { id: string; status: TaskStatus; version: number } {
     // This internal primitive does not have an HTTP route. Later commands must save
     // their proposal, judgment, or review record in the same transaction.
     this.db.exec('BEGIN IMMEDIATE');
@@ -62,6 +62,21 @@ export class TaskWorkflowService {
       if (task.version !== input.expectedVersion) throw new ApiError(409, 'version_conflict', 'Task version has changed');
       if (!transition.from.includes(task.status)) throw new ApiError(409, 'invalid_transition', 'Action is not allowed from this task state');
 
+      // Domain records supplied by the caller commit with the state and audit event.
+      applyRecords?.();
+      if (input.event === 'proposal_generated' || input.event === 'assignment_confirmed') {
+        const counts = this.db.prepare(`SELECT
+          (SELECT COUNT(*) FROM task_steps WHERE task_id = ?) AS required_count,
+          (SELECT COUNT(*) FROM allocations WHERE task_id = ?) AS proposed_count,
+          (SELECT COUNT(*) FROM allocations WHERE task_id = ?
+            AND confirmed_owner IS NOT NULL AND confirmed_by = ? AND confirmed_at IS NOT NULL) AS confirmed_count`)
+          .get(task.id, task.id, task.id, actor.id) as {
+            required_count: number; proposed_count: number; confirmed_count: number;
+          };
+        const complete = counts.required_count > 0 && counts.proposed_count === counts.required_count &&
+          (input.event === 'proposal_generated' || counts.confirmed_count === counts.required_count);
+        if (!complete) throw new ApiError(409, 'missing_allocation_records', 'Allocation records must be saved with this state change');
+      }
       // The task version and audit event commit together or roll back together.
       const now = new Date().toISOString();
       this.db.prepare(`UPDATE tasks SET status = ?, version = version + 1, updated_at = ?,
@@ -81,7 +96,7 @@ export class TaskWorkflowService {
   }
 
   getTaskView(taskId: string, actorId: string): Record<string, unknown> {
-    const task = this.db.prepare(`SELECT id, title, status, version, learner_id, reviewer_id,
+    const task = this.db.prepare(`SELECT id, title, status, version, learner_id, reviewer_id, source_record_id,
       is_simulated, source_type, simulation_notice, objective, deadline_at, capability_id, risk_level
       FROM tasks WHERE id = ?`).get(taskId) as TaskRow | undefined;
     if (!task) throw new ApiError(404, 'not_found', 'Task not found');
@@ -93,6 +108,25 @@ export class TaskWorkflowService {
     if (isLearner && (task.status === 'draft' || task.status === 'proposed')) {
       throw new ApiError(403, 'forbidden', 'Task has not been assigned');
     }
+    if (isLearner) {
+      const access = this.db.prepare(`SELECT allowed_feedback_source_id,
+        learner_may_read_original_feedback, contains_personal_data
+        FROM task_access_scopes WHERE task_id = ?`).get(task.id) as {
+        allowed_feedback_source_id: string; learner_may_read_original_feedback: number; contains_personal_data: number;
+      } | undefined;
+      if (!access || access.allowed_feedback_source_id !== task.source_record_id ||
+          access.learner_may_read_original_feedback !== 1 || access.contains_personal_data !== 0) {
+        throw new ApiError(403, 'forbidden', 'Source material is outside learner access');
+      }
+      const feedbackScope = this.db.prepare(`SELECT COUNT(*) AS total,
+        SUM(CASE WHEN source_type = ? THEN 1 ELSE 0 END) AS matching
+        FROM feedback_items WHERE task_id = ?`).get(task.source_type, task.id) as {
+        total: number; matching: number | null;
+      };
+      if (feedbackScope.total === 0 || feedbackScope.matching !== feedbackScope.total) {
+        throw new ApiError(403, 'forbidden', 'Feedback source is outside learner access');
+      }
+    }
 
     // Build an allowlisted response; never serialize a complete database row.
     const view: Record<string, unknown> = {
@@ -100,10 +134,37 @@ export class TaskWorkflowService {
       is_simulated: Boolean(task.is_simulated), source_type: task.source_type,
       simulation_notice: task.simulation_notice, objective: task.objective,
       deadline_at: task.deadline_at, capability_id: task.capability_id, risk_level: task.risk_level,
-      allowed_actions: isManager ? (task.status === 'draft' ? ['generate_proposal'] : []) :
+      allowed_actions: isManager ? (task.status === 'draft' ? ['generate_proposal'] :
+        task.status === 'proposed' ? ['confirm_assignment'] : []) :
         (task.status === 'assigned' ? ['start_task'] : []),
     };
+    if (isManager && (task.status === 'proposed' || task.status === 'assigned')) {
+      view.allocation_proposal = this.db.prepare(`SELECT a.step_id, s.step_key,
+        a.system_suggestion AS suggested_owner, a.rule_ids_json, a.hard_blockers_json,
+        a.reason, s.requires_manager_approval
+        FROM allocations a JOIN task_steps s ON s.id = a.step_id
+        WHERE a.task_id = ? ORDER BY CASE s.step_key
+          WHEN 'organize_feedback' THEN 1 WHEN 'identify_patterns' THEN 2
+          WHEN 'select_priorities' THEN 3 WHEN 'approve_business_use' THEN 4 END`).all(task.id).map((row) => {
+          const item = row as Record<string, any>;
+          return { step_id: item.step_id, step_key: item.step_key,
+            suggested_owner: item.suggested_owner, rule_ids: JSON.parse(item.rule_ids_json),
+            hard_blockers: JSON.parse(item.hard_blockers_json), reason: item.reason,
+            requires_manager_approval: Boolean(item.requires_manager_approval) };
+        });
+    }
     if (task.status !== 'draft' && task.status !== 'proposed') {
+      view.allocation = this.db.prepare(`SELECT a.step_id, s.step_key, a.confirmed_owner,
+        s.requires_manager_approval, a.override_reason
+        FROM allocations a JOIN task_steps s ON s.id = a.step_id
+        WHERE a.task_id = ? ORDER BY CASE s.step_key
+          WHEN 'organize_feedback' THEN 1 WHEN 'identify_patterns' THEN 2
+          WHEN 'select_priorities' THEN 3 WHEN 'approve_business_use' THEN 4 END`).all(task.id).map((row) => {
+          const item = row as Record<string, any>;
+          return { step_id: item.step_id, step_key: item.step_key,
+            owner: item.confirmed_owner, requires_manager_approval: Boolean(item.requires_manager_approval),
+            ...(isManager ? { override_reason: item.override_reason } : {}) };
+        });
       view.feedback = this.db.prepare(`SELECT id, journey_stage, text, source_type, is_simulated
         FROM feedback_items WHERE task_id = ? ORDER BY id`).all(task.id)
         .map((item) => ({ ...item, is_simulated: Boolean((item as { is_simulated: number }).is_simulated) }));

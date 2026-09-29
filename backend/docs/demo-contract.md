@@ -19,6 +19,8 @@ This contract implements the scope in [`development-plan.md`](./development-plan
 
 `task.json`, `users.json`, `feedback.json`, and `organization.json` are the seed source of truth. IDs are stable across the API, interface, audit trail, and review. Do not renumber feedback to make the demo narrative easier.
 
+The synthetic task fixture stores `deadline_after_seed_hours`; the seed importer converts it to a persistent absolute `deadline_at` when a new local database is created. Restarting the API does not extend an existing task deadline.
+
 ## Task input and output
 
 The learner receives the task brief, allowed source comments, and traceable duplicate groups. The required first judgment contains:
@@ -88,6 +90,16 @@ Keep the routes already specified in [`backend-design.md`](../../docs/backend-de
 - `GET /tasks/:id/history` returns only entries the actor may see at the current state.
 
 All writes record actor ID and timestamp. The initial judgment needs a database uniqueness constraint and transaction, not a frontend disabled button, to prevent two first versions from concurrent clicks.
+
+## Step 2 allocation rules and requests
+
+The allocation engine is deterministic and does not call an AI model. It evaluates hard constraints first: learner access to the original feedback, the allowed source record and feedback source types, absence of personal data in this demo, an assigned manager reviewer, at least 24 hours remaining for learner work and review, and reversible work below high risk. A blocked judgment step is suggested for the manager. AI organization is blocked when the source is out of scope or contains personal data. Business-use approval always remains with the manager.
+
+When hard constraints pass, the learner is suggested for pattern recognition and priority selection only if the task matches the learner's capability focus and there is a documented starting basis. These are soft learning criteria: a manager may choose a different owner with a reason. The manager may not override a hard constraint. The server re-evaluates constraints when the assignment is confirmed, so an earlier proposal never acts as a lasting permission grant.
+
+`POST /tasks/:id/proposal` accepts `{ "expected_version": 0 }` for a draft task. A successful `201` response includes the new task version and four step proposals with `step_id`, `suggested_owner`, `rule_ids`, `hard_blockers`, `reason`, and `requires_manager_approval`.
+
+`POST /tasks/:id/assignment` accepts `expected_version` and exactly one decision per proposed step, for example `{ "step_id": "STEP-PATTERNS", "owner": "manager", "override_reason": "The manager will model the first review." }`. `override_reason` is required when the chosen owner differs from the system suggestion. Success returns the `assigned` state and new version. Invalid input returns `400` or `422`; a stale version or wrong state returns `409`; an unauthorized actor receives `401` or `403`.
 
 ## Step 0 acceptance
 

@@ -7,6 +7,7 @@ import { createTaskApiServer } from '../src/task-api-server.ts';
 import { openSqliteDatabase, applyDatabaseMigrations } from '../src/db/sqlite-database.ts';
 import { seedOnboardingDemo } from '../src/db/seed-demo-data.ts';
 import { TaskWorkflowService } from '../src/services/task-workflow-service.ts';
+import { TaskAllocationService } from '../src/services/task-allocation-service.ts';
 
 const tempDirs: string[] = [];
 after(async () => {
@@ -45,11 +46,13 @@ test('seeded task, original feedback, and source links survive reopening SQLite'
 test('an authorized transition persists its actor, time, state, and version together', async () => {
   const { db } = await createFixture();
   try {
-    const service = new TaskWorkflowService(db);
-    const result = service.transition({ taskId: 'TASK-ONB-001', event: 'proposal_generated', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
+    const service = new TaskAllocationService(db);
+    const result = service.generateProposal({ taskId: 'TASK-ONB-001', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
     const audit = db.prepare('SELECT actor_id, event_type, from_status, to_status, occurred_at FROM audit_events WHERE task_id = ?').get('TASK-ONB-001') as Record<string, unknown>;
 
-    assert.deepEqual(result, { id: 'TASK-ONB-001', status: 'proposed', version: 1 });
+    assert.equal(result.taskId, 'TASK-ONB-001');
+    assert.equal(result.status, 'proposed');
+    assert.equal(result.version, 1);
     assert.equal(audit.actor_id, 'USER-MANAGER-001');
     assert.equal(audit.event_type, 'proposal_generated');
     assert.equal(audit.from_status, 'draft');
@@ -94,7 +97,7 @@ test('stale expected version cannot overwrite a newer state', async () => {
   const { db } = await createFixture();
   try {
     const service = new TaskWorkflowService(db);
-    service.transition({ taskId: 'TASK-ONB-001', event: 'proposal_generated', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
+    new TaskAllocationService(db).generateProposal({ taskId: 'TASK-ONB-001', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
     assert.throws(
       () => service.transition({ taskId: 'TASK-ONB-001', event: 'assignment_confirmed', actorId: 'USER-MANAGER-001', expectedVersion: 0 }),
       { statusCode: 409, code: 'version_conflict' },
@@ -109,7 +112,7 @@ test('stale expected version cannot overwrite a newer state', async () => {
 test('a committed audit event cannot be updated', async () => {
   const { db } = await createFixture();
   try {
-    new TaskWorkflowService(db).transition({ taskId: 'TASK-ONB-001', event: 'proposal_generated', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
+    new TaskAllocationService(db).generateProposal({ taskId: 'TASK-ONB-001', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
     assert.throws(() => db.exec("UPDATE audit_events SET event_type = 'forged' WHERE task_id = 'TASK-ONB-001'"));
   } finally {
     db.close();
@@ -119,7 +122,7 @@ test('a committed audit event cannot be updated', async () => {
 test('a committed audit event cannot be deleted', async () => {
   const { db } = await createFixture();
   try {
-    new TaskWorkflowService(db).transition({ taskId: 'TASK-ONB-001', event: 'proposal_generated', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
+    new TaskAllocationService(db).generateProposal({ taskId: 'TASK-ONB-001', actorId: 'USER-MANAGER-001', expectedVersion: 0 });
     assert.throws(() => db.exec("DELETE FROM audit_events WHERE task_id = 'TASK-ONB-001'"));
   } finally {
     db.close();

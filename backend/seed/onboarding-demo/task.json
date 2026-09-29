@@ -14,7 +14,7 @@
   },
   "learner_id": "USER-LEARNER-001",
   "reviewer_id": "USER-MANAGER-001",
-  "deadline_at": "2026-10-02T17:00:00+10:00",
+  "deadline_after_seed_hours": 72,
   "risk_level": "medium",
   "is_reversible": true,
   "business_use_scope": "Product discovery discussion after manager approval only",

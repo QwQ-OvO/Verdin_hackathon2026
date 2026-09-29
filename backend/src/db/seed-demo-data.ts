@@ -37,6 +37,8 @@ export function seedOnboardingDemo(db: DatabaseSync): void {
       .run(task.learner_id, task.capability.id, learner.starting_point_source);
 
     const now = new Date().toISOString();
+    // A relative deadline keeps a fresh synthetic demo usable after the original event date.
+    const deadlineAt = new Date(Date.now() + task.deadline_after_seed_hours * 60 * 60 * 1000).toISOString();
     db.prepare(`INSERT INTO tasks
       (id, title, source_record_id, source_type, is_simulated, simulation_notice,
        business_context, objective, capability_id, learner_id, reviewer_id, deadline_at,
@@ -44,8 +46,18 @@ export function seedOnboardingDemo(db: DatabaseSync): void {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?)`)
       .run(task.id, task.title, task.source_record_id, task.source_type, Number(task.is_simulated),
         task.simulation_notice, task.business_context, task.objective, task.capability.id,
-        task.learner_id, task.reviewer_id, task.deadline_at, task.risk_level,
+        task.learner_id, task.reviewer_id, deadlineAt, task.risk_level,
         Number(task.is_reversible), task.business_use_scope, task.status, now, now);
+
+    db.prepare(`INSERT INTO task_access_scopes
+      (task_id, allowed_feedback_source_id, contains_personal_data,
+       learner_may_read_original_feedback, learner_may_change_verification_rules,
+       learner_may_approve_business_use) VALUES (?, ?, ?, ?, ?, ?)`)
+      .run(task.id, task.access_scope.allowed_feedback_source_id,
+        Number(task.access_scope.contains_personal_data),
+        Number(task.access_scope.learner_may_read_original_feedback),
+        Number(task.access_scope.learner_may_change_verification_rules),
+        Number(task.access_scope.learner_may_approve_business_use));
 
     const insertFeedback = db.prepare(`INSERT INTO feedback_items
       (id, task_id, journey_stage, text, source_type, is_simulated) VALUES (?, ?, ?, ?, ?, ?)`);
