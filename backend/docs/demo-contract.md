@@ -85,7 +85,7 @@ Keep the routes already specified in [`backend-design.md`](../../docs/backend-de
 - `POST /tasks/:id/assignment` records the manager's choice for each step and an `override_reason` where it differs from the proposal.
 - `POST /tasks/:id/start` accepts `expected_version` and moves the assigned learner's task to `in_progress` only when both judgment steps remain assigned to that learner and source access is valid.
 - `POST /tasks/:id/first-judgment` accepts `expected_version`, `patterns`, `evidence_ids`, exactly two `priorities`, `journey_stage_distinctions`, and `uncertainties`. It atomically creates version 1 once.
-- `POST /tasks/:id/hints` accepts a requested help level; the server checks the state and appends a hint event.
+- `POST /tasks/:id/hints` accepts `level`, `expected_version`, and `request_id`; the server checks the state and appends a hint event. `GET /tasks/:id/hints` returns only hints visible to the authenticated actor at the current task state.
 - `POST /tasks/:id/revisions` appends a version with `change_reason` and a parent version ID.
 - `POST /tasks/:id/review` records `approved` or `changes_requested`, feedback, and business-use scope. Capability evidence and the next-support recommendation are separate from this decision.
 - `GET /tasks/:id/history` returns only entries the actor may see at the current state.
@@ -121,6 +121,14 @@ The learner starts with `POST /tasks/TASK-ONB-001/start` and `{ "expected_versio
 ```
 
 Every cited ID must resolve to this task's original feedback. A successful submission returns `201 Created`, task status `first_submitted`, and judgment version 1. Repeated or stale submissions return `409 Conflict`; invalid content or evidence returns `422 Unprocessable Entity`. The saved first judgment becomes read-only in `GET /tasks/:id` after submission. Its `assisted` flag reflects any recorded pre-submission hint use; hint generation is implemented in Step 4.
+
+### Step 4 hint requests
+
+The learner requests help with, for example, `{ "level": 1, "expected_version": 3, "request_id": "reflection-1" }` while `in_progress`. Level 1 returns a vetted, source-free reflection question. Levels 2 and 3 require a saved first judgment and use `expected_version: 4` immediately after first submission. Level 2 provides a narrow clue with original feedback IDs; level 3 checks potentially missing or conflicting evidence and uncertain assumptions. Neither level grants business approval or changes verification policy.
+
+The response includes `id`, `level`, `kind`, `text`, `source_ids`, `model_version`, and `created_at`. A new hint returns `201 Created`; retrying the same `request_id` and level returns the saved hint with `200 OK`. The same request ID with a different level returns `409 Conflict`. Invalid request fields return `422`; a prohibited task state or stale version returns `409`; rejected model output or provider failure returns `502` without saving or displaying that output.
+
+The server records each successful hint in append-only `hint_events` and an audit event. Source IDs in model output and any IDs named in its text must match the task's allowed original feedback. The model receives only that feedback and the learner's saved first judgment. Without live-model configuration, the clearly labelled synthetic demo uses a deterministic hint adapter. To enable the optional OpenAI Responses adapter, set both `OPENAI_API_KEY` and `OPENAI_HINT_MODEL` on the server; the API requests structured JSON with `store: false` and no tools. Live provider behavior requires credentials and is not part of offline automated tests.
 
 All writes record actor ID and timestamp. The initial judgment needs a database uniqueness constraint and transaction, not a frontend disabled button, to prevent two first versions from concurrent clicks.
 

@@ -179,7 +179,9 @@ export class TaskWorkflowService {
       allowed_actions: isManager ? (task.status === 'draft' ? ['generate_proposal'] :
         task.status === 'proposed' ? ['confirm_assignment'] : []) :
         (learnerHasJudgmentSteps && task.status === 'assigned' ? ['start_task'] :
-          learnerHasJudgmentSteps && task.status === 'in_progress' ? ['submit_first_judgment'] : []),
+          learnerHasJudgmentSteps && task.status === 'in_progress' ? ['submit_first_judgment', 'request_hint_1'] :
+          learnerHasJudgmentSteps && ['first_submitted', 'revision_in_progress', 'changes_requested'].includes(task.status)
+            ? ['request_hint_2', 'request_hint_3'] : []),
     };
     if (isManager && (task.status === 'proposed' || task.status === 'assigned')) {
       view.allocation_proposal = this.db.prepare(`SELECT a.step_id, s.step_key,

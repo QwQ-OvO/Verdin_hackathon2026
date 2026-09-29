@@ -3,6 +3,8 @@ import { DatabaseSync } from 'node:sqlite';
 import { ApiError, TaskWorkflowService } from './services/task-workflow-service.ts';
 import { TaskAllocationService } from './services/task-allocation-service.ts';
 import { FirstJudgmentService } from './services/first-judgment-service.ts';
+import { TaskHintService } from './services/task-hint-service.ts';
+import { createHintModelAdapterFromEnvironment, type HintModelAdapter } from './services/hint-model-adapter.ts';
 import type { AllocationOwner } from './services/allocation-rule-engine.ts';
 
 function sendJson(response: http.ServerResponse, status: number, body: unknown, headers: Record<string, string> = {}): void {
@@ -39,10 +41,11 @@ function expectedVersion(body: Record<string, unknown>): number {
 }
 
 /** Expose manager allocation commands without exposing a generic status setter. */
-export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<string, string> }): Server {
+export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<string, string>; hintModel?: HintModelAdapter }): Server {
   const workflow = new TaskWorkflowService(options.db);
   const allocation = new TaskAllocationService(options.db);
   const firstJudgment = new FirstJudgmentService(options.db);
+  const hints = new TaskHintService(options.db, options.hintModel ?? createHintModelAdapterFromEnvironment());
   return http.createServer((request, response) => {
     const handleRequest = async () => {
       const pathname = new URL(request.url ?? '/', 'http://localhost').pathname;
@@ -50,7 +53,7 @@ export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<str
         sendJson(response, 200, { data: { status: 'ok' } });
         return;
       }
-      const match = /^\/tasks\/([^/]+)(?:\/(proposal|assignment|start|first-judgment))?$/.exec(pathname);
+      const match = /^\/tasks\/([^/]+)(?:\/(proposal|assignment|start|first-judgment|hints))?$/.exec(pathname);
       if (!match) throw new ApiError(404, 'not_found', 'Route not found');
       const authorization = request.headers.authorization;
       const token = authorization?.startsWith('Bearer ') ? authorization.slice(7) : undefined;
@@ -61,6 +64,10 @@ export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<str
 
       if (request.method === 'GET' && !match[2]) {
         sendJson(response, 200, { data: workflow.getTaskView(taskId, actorId) });
+        return;
+      }
+      if (request.method === 'GET' && match[2] === 'hints') {
+        sendJson(response, 200, { data: hints.listHints(taskId, actorId) });
         return;
       }
       if (request.method === 'POST' && match[2] === 'proposal') {
@@ -100,6 +107,14 @@ export function createTaskApiServer(options: { db: DatabaseSync; tokens: Map<str
         const body = await readJsonObject(request);
         const result = firstJudgment.submit({ taskId, actorId, expectedVersion: expectedVersion(body), body });
         sendJson(response, 201, { data: result }, { location: `/tasks/${encodeURIComponent(taskId)}` });
+        return;
+      }
+      if (request.method === 'POST' && match[2] === 'hints') {
+        const body = await readJsonObject(request);
+        const result = await hints.requestHint({ taskId, actorId, expectedVersion: expectedVersion(body),
+          level: body.level, requestId: body.request_id });
+        sendJson(response, result.created ? 201 : 200, { data: result.hint },
+          result.created ? { location: `/tasks/${encodeURIComponent(taskId)}/hints` } : {});
         return;
       }
       throw new ApiError(404, 'not_found', 'Route not found');

@@ -48,11 +48,12 @@ Learning participation never grants authority to publish a conclusion or change 
 | Product design | User story, frontend and backend specifications, four product diagrams, and four English UI mockups in [`ui/`](ui/). | Validate the learning loop with a manager and learner. |
 | Backend Step 0 | English [demo contract](backend/docs/demo-contract.md), manager rubric, and clearly labelled synthetic task, user, and feedback fixtures. | Keep the contract aligned with implementation changes. |
 | Backend Steps 1–2 | Node.js/TypeScript API and SQLite persistence; guarded state transitions, version checks, append-only audit events, role-filtered task reads, transparent step-level allocation, and manager confirmation with hard-constraint rechecks. | Continue using these foundations for hints and review. |
-| Backend Step 3 | Learner start and first-judgment APIs; task/source/step authorization at write time; structured two-priority validation; original-feedback citation checks; one atomic, append-only first version; role- and state-filtered readback. Duplicate or concurrent submissions create one version. | Add controlled hints and model output validation in Step 4. |
+| Backend Step 3 | Learner start and first-judgment APIs; task/source/step authorization at write time; structured two-priority validation; original-feedback citation checks; one atomic, append-only first version; role- and state-filtered readback. Duplicate or concurrent submissions create one version. | Use the protected submission boundary for feedback and revision. |
+| Backend Step 4 | Level 1 vetted reflection question before submission; level 2 source clue and level 3 evidence check after submission; server-side model adapter, output/source-ID validation, repeat-safe hint requests, append-only hint and audit records, and role-filtered hint reads. | Add append-only revisions and manager review in Step 5. |
 | Frontend | Static mockups show manager assignment, learner judgment, revision, and manager review. | Build the four React/TypeScript screens and connect them to the API. |
-| AI | No live model integration. Source-preserving organization groups are curated demo data. | Add server-side material organization, limited hints, and post-submission evidence checks after the first-judgment boundary is enforced. |
+| AI | Source-preserving organization groups are curated demo data. Hints use a deterministic synthetic-demo adapter by default; an optional server-side OpenAI Responses adapter can be enabled with credentials. | Evaluate live hint quality on approved data and add the Step 5 revision and review flow. |
 
-The current backend runs manager allocation through the learner's saved first judgment. Hints, revision, business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
+The current backend runs manager allocation through saved first judgment and controlled hints. Revision, business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
 
 ### Run the current backend
 
@@ -67,6 +68,8 @@ npm start
 ```
 
 The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. A manager can propose and confirm allocation, then the learner can call `POST /tasks/TASK-ONB-001/start` and `POST /tasks/TASK-ONB-001/first-judgment` using the request shapes in the [demo contract](backend/docs/demo-contract.md). The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Use `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
+
+The learner can also call `POST /tasks/TASK-ONB-001/hints` and `GET /tasks/TASK-ONB-001/hints`. Hints work offline with the synthetic demo adapter. For optional live generation of post-submission hints, set `OPENAI_API_KEY` and `OPENAI_HINT_MODEL` in the server environment. Do not put the API key in frontend code or commit it to the repository. Live model calls have not been verified without credentials.
 
 ## Day 3 MVP
 
