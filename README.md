@@ -29,7 +29,7 @@ Learning participation never grants authority to publish a conclusion or change 
 
 **MVP product architecture:**
 
-![Product architecture](product%20design/01-product-architecture.svg)
+![Product architecture](product%20design/01-apprenticeship-architecture.svg)
 
 **Learning arrangement and execution authority are separate decisions:**
 
