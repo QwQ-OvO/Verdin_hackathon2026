@@ -1,0 +1,14 @@
+{
+  "source_record_id": "SIM-ONB-BATCH-001",
+  "is_simulated": true,
+  "method": "Curated source-preserving demo grouping; it is not an AI conclusion or issue ranking.",
+  "groups": [
+    {
+      "id": "GROUP-A",
+      "label": "Similar reports about an upload receipt",
+      "relationship": "near_duplicate",
+      "source_ids": ["FB-014", "FB-027"]
+    }
+  ],
+  "visibility_rule": "The learner may read these groups after assignment, together with all original comments. Do not add ranked issues, inferred causes, or manager guidance here."
+}

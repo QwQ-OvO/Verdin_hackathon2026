@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": "USER-LEARNER-001",
+      "display_name": "Alex Morgan",
+      "role": "learner",
+      "team": "Product Discovery",
+      "job_title": "Junior Product Analyst",
+      "capability_focus_id": "CAP-USER-INSIGHT-001",
+      "starting_point": "Has summarized individual customer comments but has limited practice comparing conflicting evidence and selecting investigation priorities.",
+      "starting_point_source": "Synthetic manager observation for demo"
+    },
+    {
+      "id": "USER-MANAGER-001",
+      "display_name": "Taylor Chen",
+      "role": "manager",
+      "team": "Product Discovery",
+      "job_title": "Product Manager",
+      "can_review_task_ids": ["TASK-ONB-001"]
+    }
+  ],
+  "authentication_note": "Fixed identities are demo fixtures. The backend must determine the actor server-side and must not trust a client-supplied role."
+}

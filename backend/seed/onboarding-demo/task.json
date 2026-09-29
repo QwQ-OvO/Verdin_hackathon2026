@@ -1,0 +1,65 @@
+{
+  "id": "TASK-ONB-001",
+  "title": "Merchant onboarding feedback review",
+  "source_record_id": "SIM-ONB-BATCH-001",
+  "source_type": "simulated_product_feedback",
+  "is_simulated": true,
+  "simulation_notice": "Synthetic demo material. No real merchant or Airwallex customer data is included.",
+  "business_context": "A product team wants to identify two merchant onboarding experience issues worth investigating from a small, mixed set of synthetic comments. The comments alone do not establish prevalence or root cause.",
+  "objective": "Recommend two investigation priorities, explain the reasoning, cite original feedback, and identify contrary evidence and uncertainty.",
+  "capability": {
+    "id": "CAP-USER-INSIGHT-001",
+    "name": "User insight",
+    "observable_behavior": "Identify patterns across feedback, weigh supporting and conflicting evidence, distinguish journey stages, and justify investigation priorities."
+  },
+  "learner_id": "USER-LEARNER-001",
+  "reviewer_id": "USER-MANAGER-001",
+  "deadline_at": "2026-10-02T17:00:00+10:00",
+  "risk_level": "medium",
+  "is_reversible": true,
+  "business_use_scope": "Product discovery discussion after manager approval only",
+  "access_scope": {
+    "allowed_feedback_source_id": "SIM-ONB-BATCH-001",
+    "contains_personal_data": false,
+    "learner_may_read_original_feedback": true,
+    "learner_may_change_verification_rules": false,
+    "learner_may_approve_business_use": false
+  },
+  "status": "draft",
+  "task_steps": [
+    {
+      "id": "STEP-ORGANIZE",
+      "key": "organize_feedback",
+      "label": "Organize and link repeated feedback",
+      "suggested_owner": "ai",
+      "requires_manager_approval": false
+    },
+    {
+      "id": "STEP-PATTERNS",
+      "key": "identify_patterns",
+      "label": "Identify issue patterns across journey stages",
+      "suggested_owner": "learner",
+      "requires_manager_approval": false
+    },
+    {
+      "id": "STEP-PRIORITIES",
+      "key": "select_priorities",
+      "label": "Recommend two investigation priorities with evidence",
+      "suggested_owner": "learner",
+      "requires_manager_approval": false
+    },
+    {
+      "id": "STEP-APPROVE",
+      "key": "approve_business_use",
+      "label": "Approve recommendation for product discovery",
+      "suggested_owner": "manager",
+      "requires_manager_approval": true
+    }
+  ],
+  "deliverable": {
+    "required_priority_count": 2,
+    "priority_fields": ["title", "reason", "evidence_ids", "contrary_evidence_ids", "next_check"],
+    "additional_fields": ["patterns", "uncertainties"],
+    "allowed_outcome": "Investigation recommendation, subject to manager review"
+  }
+}

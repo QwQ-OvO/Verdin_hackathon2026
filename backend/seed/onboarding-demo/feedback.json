@@ -1,0 +1,92 @@
+{
+  "source_record_id": "SIM-ONB-BATCH-001",
+  "source_type": "simulated_product_feedback",
+  "is_simulated": true,
+  "simulation_notice": "All comments below are fictional examples written for this demo.",
+  "items": [
+    {
+      "id": "FB-011",
+      "journey_stage": "application",
+      "text": "I started the business application but was unsure whether the trading name and registered name should match. I stopped to check our records before continuing.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-014",
+      "journey_stage": "document_upload",
+      "text": "After upload the screen kept spinning. I could not tell if the file was submitted.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-016",
+      "journey_stage": "document_upload",
+      "text": "The requested document type was clear to me, but our finance colleague had to find the latest copy before I could upload it.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-018",
+      "journey_stage": "document_upload",
+      "text": "My document upload showed a confirmation immediately. I could see that the file had been received.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-019",
+      "journey_stage": "verification_review",
+      "text": "The page said more information was required, but I had missed an email asking for an updated document. I found it later and sent the new file.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-021",
+      "journey_stage": "verification_review",
+      "text": "Three days later I still cannot see progress or what I need to do next.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-024",
+      "journey_stage": "verification_review",
+      "text": "I can see that my application is being reviewed, but I cannot tell whether any action is needed from me or when I should check again.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-025",
+      "journey_stage": "verification_review",
+      "text": "The request for another document explained what was missing. After I uploaded it, I was still unsure where to check the new review status.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-027",
+      "journey_stage": "document_upload",
+      "text": "I uploaded the verification file and saw a loading indicator for a while. There was no clear receipt, so I wondered if I needed to submit it again.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-030",
+      "journey_stage": "application",
+      "text": "The application checklist helped me gather the company details before I started. I did not have to go back to find missing information.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-036",
+      "journey_stage": "account_activation",
+      "text": "Verification passed, but the first-payment setup message suggests I cannot use it.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    },
+    {
+      "id": "FB-038",
+      "journey_stage": "account_activation",
+      "text": "After the account showed active, I needed a separate explanation of the payment setup steps. The verification result itself was clear.",
+      "source_type": "simulated_product_feedback",
+      "is_simulated": true
+    }
+  ]
+}
