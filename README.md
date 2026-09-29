@@ -6,6 +6,10 @@
 
 Junior tasks deliver work **and** develop judgement. As AI automates those tasks, employees may lose the low-risk practice and correction that once helped them become experts. Apprentice keeps the valuable learning moments inside real work.
 
+## Who it is for
+
+Apprentice is for companies adopting AI in knowledge-work teams that still need junior employees to develop sound judgement. Team managers assign and review real work; junior employees practise the decisions that matter. Our first use case is a fintech product team analysing merchant onboarding feedback, but the approach also fits other teams with recurring junior analysis tasks and experienced reviewers. A company does not need to be Airwallex-sized to use it.
+
 ## The solution
 
 A company defines a capability it needs, such as **user insight**. For each real task, Apprentice proposes which steps AI should handle, which judgement a learner should make, and which decisions require a manager. The manager confirms the plan and remains accountable for business use of the result.
