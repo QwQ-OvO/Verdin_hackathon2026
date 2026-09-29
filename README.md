@@ -53,9 +53,8 @@ Learning participation never grants authority to publish a conclusion or change 
 | Backend | The Node.js/TypeScript API implements guarded task states, transparent step-level allocation, manager confirmation, a protected first judgement, and controlled hints. Append-only revisions and manager review are planned for Step 5. | Integrate with approval workflows, enforce granular access controls, and retain a reviewable audit trail. |
 | Storage | SQLite persists tasks, source links, allocation decisions, the immutable first judgement, hints and audit events. Revision and review records are planned for Step 5. | Move to managed enterprise storage with retention policies, access logging and backups. |
 | AI | Curated, source-preserving groups and a deterministic hint adapter keep the synthetic demo repeatable. An optional server-side OpenAI Responses adapter is implemented for post-submission hints; `gpt-4o-mini` is the planned live-model candidate, but live hint quality has not been verified. Permissions and allocation constraints remain rule-based. | Evaluate an Australia-hosted, local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Validate quality and data handling; model output remains subject to manager review. |
-| Progress and delivery | The user story, specifications, four product diagrams, four UI mockups, and backend Steps 0–4 are complete. Next: build the screens, append-only revisions and manager review, then test the full learning loop with a manager and learner. | Iterate with managers and learners; measure delivery quality, help used and review time before expanding roles and integrations. |
 
-The current backend runs manager allocation through saved first judgment and controlled hints. Revision, business approval, capability evidence, and later-task validation remain in the [backend development plan](backend/docs/development-plan.md). An enterprise deployment would also need identity integration, granular data access, retention controls, and a reviewed model/data-hosting choice.
+The backend currently supports manager allocation, first judgement and controlled hints. Revisions, business approval, capability evidence and later-task validation remain planned; see the [backend development plan](backend/docs/development-plan.md).
 
 ### Run the current backend
 
@@ -69,9 +68,9 @@ $env:DEMO_LEARNER_TOKEN = '<choose-a-different-secret-learner-token>'
 npm start
 ```
 
-The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. A manager can propose and confirm allocation, then the learner can call `POST /tasks/TASK-ONB-001/start` and `POST /tasks/TASK-ONB-001/first-judgment` using the request shapes in the [demo contract](backend/docs/demo-contract.md). The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Use `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
+The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task endpoints require a bearer token. The manager can propose and confirm allocation; the learner can start the task, submit a first judgement and request hints using the endpoints in the [demo contract](backend/docs/demo-contract.md). Hints work offline with the synthetic adapter. For optional live post-submission hints, set `OPENAI_API_KEY` and `OPENAI_HINT_MODEL` on the server. Keep the API key out of frontend code and the repository.
 
-The learner can also call `POST /tasks/TASK-ONB-001/hints` and `GET /tasks/TASK-ONB-001/hints`. Hints work offline with the synthetic demo adapter. For optional live generation of post-submission hints, set `OPENAI_API_KEY` and `OPENAI_HINT_MODEL` in the server environment. Do not put the API key in frontend code or commit it to the repository. Live model calls have not been verified without credentials.
+The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Run `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
 
 ## Day 3 MVP
 
