@@ -4,46 +4,46 @@
 
 > If AI does the beginner work, where does expertise come from?
 
-Junior tasks deliver work **and** develop judgement. As AI automates those tasks, employees may lose the low-risk practice and correction that once helped them become experts. Apprentice keeps the valuable learning moments inside real work.
+Junior tasks deliver work and develop judgement. When AI takes over those tasks, teams also risk losing the practice that helps junior employees become experts. **Skill Gym identifies the decisions worth practising within a work task, explains why they matter, and keeps a manager accountable for the business outcome.**
 
 ## Who it is for
 
-Apprentice is for companies adopting AI in knowledge-work teams that still need junior employees to develop sound judgement. Team managers assign and review real work; junior employees practise the decisions that matter. Our first use case is a fintech product team analysing merchant onboarding feedback, but the approach also fits other teams with recurring junior analysis tasks and experienced reviewers. A company does not need to be Airwallex-sized to use it.
+Skill Gym is for knowledge-work teams adopting AI while developing junior employees' judgement. A manager decides how a task is divided and reviews its output; a junior employee practises a decision that matters to the team's work. The first use case is a fintech product team's review of merchant onboarding feedback. The current demo uses **synthetic feedback and a simulated task record**, not live Airwallex or merchant data.
 
 ## The solution
 
-A company defines a capability it needs, such as **user insight**. For each real task, Apprentice proposes which steps AI should handle, which judgement a learner should make, and which decisions require a manager. The manager confirms the plan and remains accountable for business use of the result.
+A company defines a capability it needs, such as **user insight**. For a task, Skill Gym proposes a step-level plan: which preparation can be automated, which judgement should be reserved for the learner, and which decision needs manager approval. **The allocation proposal currently comes from transparent rules, not a model deciding who is allowed to do the work.** The manager confirms or changes the proposal within access and risk constraints.
 
-In our example, AI organises de-identified merchant onboarding feedback while preserving links to every original comment. A junior product analyst identifies the two issues worth investigating and cites the evidence. Their first judgement is saved before any AI conclusion is shown. AI can then offer limited hints and check for missing or conflicting evidence; the analyst revises, and the manager reviews the final output.
+In the demo, source-preserving groups organise synthetic merchant onboarding comments. The learner identifies two issues worth investigating, explains the priorities, and cites original comments. The server saves this first judgement before any AI issue conclusion can be shown to the learner. Optional hints and evidence checks can support a revision. The planned manager review decides whether the recommendation may enter product discovery and records observations about the learner's reasoning.
+
+The product's central decision is **why a particular judgement should remain with a developing employee when other steps can be automated**. Feedback closes the learning loop; AI-generated feedback is an optional aid to that loop.
 
 **Automate the work where possible. Preserve the judgement where necessary.**
 
 ## How the loop works
 
-1. **Define:** The manager selects the target capability and registers a real task, its source, deadline, risk and reviewer.
-2. **Allocate:** Transparent rules check access, learning value and business cost. The system explains a step-by-step proposal; the manager confirms or overrides it.
-3. **Judge:** The learner reads source material and submits an evidence-backed first judgement before seeing AI's conclusion.
-4. **Improve:** Hints, AI evidence checks and revisions are recorded without overwriting the first version.
-5. **Review:** The manager approves or returns the business output and gives capability feedback.
-6. **Validate:** A later task in a different context tests whether the learner needs less support. One approved delivery does not prove mastery.
+1. **Define the work and capability:** The manager records the task's source, deadline, risk, reviewer and the judgement the employee needs to develop.
+2. **Decide the division of work:** Rules check access, review capacity, time, risk and learning value. The system explains a proposal for each step; the manager confirms or overrides it.
+3. **Preserve the first judgement:** The learner reads traceable source material and submits a reasoned recommendation with original evidence. The server protects this first version and withholds any AI issue conclusion until it is saved.
+4. **Review the result:** The manager approves or returns the business recommendation and records specific capability observations. Hints, AI evidence checks and revisions can support this process without replacing the first version or the manager's decision.
+
+A later task in a different context can test whether the learner needs less support. **One approved delivery is evidence of performance on that task, not proof of mastery.**
 
 Learning participation never grants authority to publish a conclusion or change risk controls.
 
 ## Product flows
 
-**MVP product architecture:**
+These diagrams describe the intended product flow; the implementation status is listed below. The allocation decision is the starting point:
 
-![Product architecture](product%20design/01-apprenticeship-architecture.svg)
-
-**Learning arrangement and execution authority are separate decisions:**
+**Decide what the learner should practise and who may approve the outcome:**
 
 ![Work allocation and authority](product%20design/02-work-allocation-and-authority.svg)
 
-**The real-work learning loop:**
+**Complete the task and review the evidence:**
 
 ![Real-work learning loop](product%20design/03-real-work-learning-loop.svg)
 
-[Entry to the first real task](product%20design/04-first-real-task-entry.svg)
+Supporting views: [product architecture](product%20design/01-apprenticeship-architecture.svg) · [entry to the first task](product%20design/04-first-real-task-entry.svg).
 
 ## Tech and current progress
 
@@ -54,7 +54,7 @@ Learning participation never grants authority to publish a conclusion or change 
 | Storage | SQLite persists tasks, source links, allocation decisions, the immutable first judgement, hints and audit events. Revision and review records are planned for Step 5. | Move to managed enterprise storage with retention policies, access logging and backups. |
 | AI | `gpt-4o-mini` is the planned candidate based on expected performance and cost; live quality remains unverified. | Evaluate local-only Ollama deployment with `gemma3:12b` against the same tasks before using sensitive data. Validate quality and data handling; model output remains subject to manager review. |
 
-The backend currently supports manager allocation, first judgement and controlled hints. Revisions, business approval, capability evidence and later-task validation remain planned; see the [backend development plan](backend/docs/development-plan.md).
+The runnable backend currently ends after the learner's first judgement and controlled hints. The full manager review loop shown in the diagrams is a **planned MVP milestone**; see the [backend development plan](backend/docs/development-plan.md). Later-task validation and adaptive support require evidence across more than one task.
 
 ### Run the current backend
 
@@ -72,10 +72,10 @@ The API listens on `127.0.0.1:3001` by default. `GET /health` is public; task en
 
 The first start imports synthetic records into `backend/data/demo.sqlite`; later starts preserve the database. Run `npm test` and `npm run typecheck` to verify the backend. Demo tokens are for local use only.
 
-## Day 3 MVP
+## MVP scope and evidence
 
-Deliver **one capability, one real task, one learner, one manager, transparent allocation rules, three levels of help and one manager review**. The demo must show that the manager can confirm why a judgement is reserved, the server protects the learner's first submission, and the reviewer can inspect the first judgement, hints, revisions and cited evidence.
+The intended end-to-end demo covers **one capability, one simulated business task, one learner, one manager, an explainable step-level allocation and one manager review**. It should show why a judgement was reserved, protect the learner's first evidence-backed submission, and let the manager inspect that submission and decide whether the recommendation can be used. Optional AI hints and evidence checks can be demonstrated, but the core allocation and review loop should also be understandable without them.
 
-We will examine both **delivery quality** and **independent capability** through judgement quality, help used, manager review time, and performance on a later task. Demo material will be de-identified or clearly marked as simulated; connecting live customer data requires separate access and compliance work.
+The demo can record judgement quality, evidence use, help used and manager review time. A later task in a different context would be needed to test growing independence. These measures are proposed evaluation criteria, not evidence that the product already improves skill development. Every current task record and merchant comment is synthetic; live customer data would require separate access and compliance work.
 
 Detailed specifications: [User story](docs/user-story.md) · [Frontend design](docs/frontend-design.md) · [Backend design](docs/backend-design.md).
