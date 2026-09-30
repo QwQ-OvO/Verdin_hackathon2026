@@ -1,4 +1,4 @@
-# Apprentice — Preserve the Judgement
+# Skill Gym
 
 **Team Verdin · Airwallex Problem Statement 1: Future Work / Skill Development**
 
