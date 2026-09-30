@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<title id="title">Apprentice V2 — Manager allocation</title>
+<desc id="desc">A rule-backed step allocation for one synthetic merchant feedback task. AI prepares sources, the learner judges patterns and priorities, and the manager approves business use.</desc>
+<!-- Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5 · decision dossier -->
+<defs><filter id="panel-shadow" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#6a578e" flood-opacity=".10"/></filter></defs>
+<style>text{font-family:Inter,"Segoe UI",Arial,sans-serif;font-style:normal} .mono{font-family:Consolas,"Cascadia Code",monospace}</style>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#f7f5fb" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="232" height="900" rx="0" fill="#f0ecf8" stroke="none" stroke-width="1"/>
+<rect x="24" y="26" width="36" height="36" rx="11" fill="#612fff" stroke="none" stroke-width="1"/>
+<text x="42" y="51" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">A</text>
+<text x="71" y="47" font-size="18" fill="#211b35" font-weight="800">apprentice</text>
+<text x="71" y="63" font-size="9" fill="#625c76" font-weight="600">TEAM VERDIN CONCEPT</text>
+<path d="M16 105H216" stroke="#dcd5e9" stroke-width="1"/>
+<text x="24" y="134" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1.2">ONE REAL-WORK LOOP</text>
+<text x="24" y="164" font-size="13" fill="#211b35" font-weight="700">Onboarding feedback</text>
+<text x="24" y="205" font-size="10" fill="#625c76" font-weight="500" class="mono">TASK-ONB-001</text>
+<path d="M16 226H216" stroke="#dcd5e9" stroke-width="1"/>
+<rect x="16" y="238" width="200" height="42" rx="21" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8"/>
+<text x="28" y="263" font-size="11" fill="#4d1fe1" font-weight="700" class="mono">01</text>
+<text x="56" y="263" font-size="13" fill="#4d1fe1" font-weight="700">Allocate judgement</text>
+<text x="28" y="313" font-size="11" fill="#625c76" font-weight="700" class="mono">02</text>
+<text x="56" y="313" font-size="13" fill="#625c76" font-weight="400">First judgement</text>
+<text x="28" y="363" font-size="11" fill="#625c76" font-weight="700" class="mono">03</text>
+<text x="56" y="363" font-size="13" fill="#625c76" font-weight="400">Manager review</text>
+<path d="M16 820H216" stroke="#dcd5e9" stroke-width="1"/>
+<circle cx="30" cy="846" r="4" fill="#087656"/>
+<text x="43" y="850" font-size="11" fill="#211b35" font-weight="600">Prototype · synthetic data</text>
+<text x="43" y="868" font-size="10" fill="#625c76" font-weight="400">No backend actions</text>
+<rect x="232" y="0" width="1208" height="62" rx="0" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8"/>
+<path d="M232 62H1440" stroke="#dcd5e9" stroke-width="1"/>
+<text x="264" y="37" font-size="12" fill="#625c76" font-weight="400">Apprentice   /   User insight   /</text>
+<text x="477" y="37" font-size="12" fill="#211b35" font-weight="700">Learning opportunity</text>
+<rect x="1190" y="18" width="132" height="26" rx="13.0" fill="#eae4fb" stroke="none" stroke-width="1"/>
+<text x="1256.0" y="35.0" font-size="11" fill="#4d1fe1" font-weight="700" text-anchor="middle">V2 SVG CONCEPT</text>
+<text x="1342" y="36" font-size="10" fill="#625c76" font-weight="700" letter-spacing="1">MANAGER</text>
+<text x="264" y="101" font-size="11" fill="#4d1fe1" font-weight="800" letter-spacing="1">MANAGER DECISION · BEFORE THE WORK STARTS</text>
+<text x="264" y="147" font-size="35" fill="#211b35" font-weight="800">Which judgement should remain human?</text>
+<text x="264" y="179" font-size="14" fill="#625c76" font-weight="400">The manager decides where automation helps and where real work still develops expertise.</text>
+<rect x="264" y="202" width="1144" height="92" rx="18" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
+<rect x="284" y="219" width="160" height="26" rx="13.0" fill="#fff1d8" stroke="none" stroke-width="1"/>
+<text x="364.0" y="236.0" font-size="11" fill="#91600f" font-weight="700" text-anchor="middle">SYNTHETIC DEMO MATERIAL</text>
+<text x="456" y="237" font-size="17" fill="#211b35" font-weight="700">Onboarding feedback</text>
+<text x="284" y="263" font-size="12" fill="#625c76" font-weight="400">Merchant onboarding · Recommend two issues with reasons and original feedback citations.</text>
+<text x="1080" y="233" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">CAPABILITY</text>
+<text x="1080" y="253" font-size="12" fill="#211b35" font-weight="700">User insight</text>
+<text x="1268" y="233" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">RISK</text>
+<text x="1268" y="253" font-size="12" fill="#211b35" font-weight="700">Medium</text>
+<rect x="264" y="316" width="798" height="479" rx="20" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
+<text x="286" y="346" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">RULE-BACKED PROPOSAL</text>
+<text x="286" y="377" font-size="21" fill="#211b35" font-weight="700">Four steps. Three kinds of ownership.</text>
+<text x="1035" y="352" font-size="11" fill="#625c76" font-weight="600" text-anchor="end">Manager confirmation</text>
+<rect x="265" y="394" width="796" height="36" rx="0" fill="#f1edf8" stroke="none" stroke-width="1"/>
+<text x="286" y="417" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">WORK STEP</text>
+<text x="612" y="417" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">SUGGESTED OWNER</text>
+<text x="775" y="417" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">WHY</text>
+<path d="M265 430H1061" stroke="#dcd5e9" stroke-width="1"/>
+<text x="286" y="470" font-size="11" fill="#625c76" font-weight="600" class="mono">01</text>
+<text x="325" y="464" font-size="13" fill="#211b35" font-weight="700">Organize source feedback</text>
+<text x="325" y="484" font-size="11" fill="#625c76" font-weight="400">Group repeated comments; retain IDs.</text>
+<rect x="610" y="455" width="94" height="26" rx="13.0" fill="#ffffff" stroke="none" stroke-width="1"/>
+<text x="657.0" y="472.0" font-size="11" fill="#4d1fe1" font-weight="700" text-anchor="middle">AI prepares</text>
+<text x="775" y="463" font-size="11" fill="#625c76" font-weight="400">Repeatable preparation; every</text>
+<text x="775" y="481" font-size="11" fill="#625c76" font-weight="400">original remains available.</text>
+<rect x="265" y="508" width="796" height="78" rx="0" fill="#eae4fb" stroke="none" stroke-width="1"/>
+<path d="M265 508H1061" stroke="#dcd5e9" stroke-width="1"/>
+<text x="286" y="548" font-size="11" fill="#625c76" font-weight="600" class="mono">02</text>
+<text x="325" y="542" font-size="13" fill="#211b35" font-weight="700">Identify issue patterns</text>
+<text x="325" y="562" font-size="11" fill="#625c76" font-weight="400">Separate journey stages.</text>
+<rect x="610" y="533" width="94" height="26" rx="13.0" fill="#e7f6ee" stroke="none" stroke-width="1"/>
+<text x="657.0" y="550.0" font-size="11" fill="#087656" font-weight="700" text-anchor="middle">Learner judges</text>
+<text x="775" y="541" font-size="11" fill="#625c76" font-weight="400">Direct practice in the target</text>
+<text x="775" y="559" font-size="11" fill="#625c76" font-weight="400">user-insight capability.</text>
+<rect x="265" y="586" width="796" height="78" rx="0" fill="#eae4fb" stroke="none" stroke-width="1"/>
+<path d="M265 586H1061" stroke="#dcd5e9" stroke-width="1"/>
+<text x="286" y="626" font-size="11" fill="#625c76" font-weight="600" class="mono">03</text>
+<text x="325" y="620" font-size="13" fill="#211b35" font-weight="700">Select two priorities</text>
+<text x="325" y="640" font-size="11" fill="#625c76" font-weight="400">Weigh evidence and uncertainty.</text>
+<rect x="610" y="611" width="94" height="26" rx="13.0" fill="#e7f6ee" stroke="none" stroke-width="1"/>
+<text x="657.0" y="628.0" font-size="11" fill="#087656" font-weight="700" text-anchor="middle">Learner judges</text>
+<text x="775" y="619" font-size="11" fill="#625c76" font-weight="400">A real, reviewable choice builds</text>
+<text x="775" y="637" font-size="11" fill="#625c76" font-weight="400">professional judgement.</text>
+<path d="M265 664H1061" stroke="#dcd5e9" stroke-width="1"/>
+<text x="286" y="704" font-size="11" fill="#625c76" font-weight="600" class="mono">04</text>
+<text x="325" y="698" font-size="13" fill="#211b35" font-weight="700">Approve business use</text>
+<text x="325" y="718" font-size="11" fill="#625c76" font-weight="400">Decide use in product discovery.</text>
+<rect x="610" y="689" width="102" height="26" rx="13.0" fill="#f1edf8" stroke="none" stroke-width="1"/>
+<text x="661.0" y="706.0" font-size="11" fill="#211b35" font-weight="700" text-anchor="middle">Manager approves</text>
+<text x="775" y="697" font-size="11" fill="#625c76" font-weight="400">Business authority stays with</text>
+<text x="775" y="715" font-size="11" fill="#625c76" font-weight="400">the assigned reviewer.</text>
+<path d="M265 742H1061" stroke="#dcd5e9" stroke-width="1"/>
+<text x="286" y="768" font-size="11" fill="#4d1fe1" font-weight="600">↳  Rule explanations are visible; soft overrides require a reason.</text>
+<rect x="1090" y="325" width="314" height="389" rx="22" fill="#eae4fb" stroke="none" stroke-width="1"/>
+<rect x="1082" y="316" width="326" height="398" rx="22" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
+<text x="1104" y="347" font-size="10" fill="#4d1fe1" font-weight="800" letter-spacing="1">THE DECISION THAT MATTERS</text>
+<text x="1104" y="385" font-size="22" fill="#211b35" font-weight="700">Why the learner?</text>
+<text x="1104" y="440" font-size="12" fill="#625c76" font-weight="400">AI prepares traceable sources.</text>
+<text x="1104" y="458" font-size="12" fill="#625c76" font-weight="400">The learner makes the decisions</text>
+<text x="1104" y="476" font-size="12" fill="#625c76" font-weight="400">that exercise user insight.</text>
+<path d="M1104 516H1386" stroke="#dcd5e9" stroke-width="1"/>
+<text x="1104" y="536" font-size="10" fill="#4d1fe1" font-weight="600" class="mono">01</text>
+<text x="1137" y="536" font-size="12" fill="#211b35" font-weight="700">Capability fit</text>
+<text x="1137" y="554" font-size="10" fill="#625c76" font-weight="400">Patterns and priorities match the goal.</text>
+<path d="M1104 571H1386" stroke="#dcd5e9" stroke-width="1"/>
+<text x="1104" y="591" font-size="10" fill="#4d1fe1" font-weight="600" class="mono">02</text>
+<text x="1137" y="591" font-size="12" fill="#211b35" font-weight="700">Safe to practise</text>
+<text x="1137" y="609" font-size="10" fill="#625c76" font-weight="400">Access, time and review are available.</text>
+<path d="M1104 626H1386" stroke="#dcd5e9" stroke-width="1"/>
+<text x="1104" y="646" font-size="10" fill="#4d1fe1" font-weight="600" class="mono">03</text>
+<text x="1137" y="646" font-size="12" fill="#211b35" font-weight="700">Accountable review</text>
+<text x="1137" y="664" font-size="10" fill="#625c76" font-weight="400">The manager approves business use.</text>
+<rect x="1082" y="728" width="326" height="67" rx="16" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
+<text x="1102" y="753" font-size="13" fill="#211b35" font-weight="700">Allocation checks</text>
+<text x="1102" y="774" font-size="11" fill="#625c76" font-weight="400">Scope · reviewer · reversibility</text>
+<path d="M264 820H1408" stroke="#dcd5e9" stroke-width="1"/>
+<text x="264" y="846" font-size="13" fill="#211b35" font-weight="700">Manager confirms the proposal or records a permitted override.</text>
+<text x="264" y="866" font-size="11" fill="#625c76" font-weight="400">Prototype view · no allocation is written to the backend.</text>
+<rect x="1158" y="833" width="250" height="43" rx="21" fill="#612fff" stroke="none" stroke-width="1"/>
+<text x="1283" y="860" font-size="12" fill="#ffffff" font-weight="800" text-anchor="middle">CONFIRM PROPOSAL   →</text>
+</svg>
