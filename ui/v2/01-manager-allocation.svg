@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-<title id="title">Apprentice V2 — Manager allocation</title>
+<title id="title">Skill Gym V2 — Manager allocation</title>
 <desc id="desc">A rule-backed step allocation for one synthetic merchant feedback task. AI prepares sources, the learner judges patterns and priorities, and the manager approves business use.</desc>
 <!-- Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5 · decision dossier -->
 <defs><filter id="panel-shadow" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#6a578e" flood-opacity=".10"/></filter></defs>
-<style>text{font-family:Inter,"Segoe UI",Arial,sans-serif;font-style:normal} .mono{font-family:Consolas,"Cascadia Code",monospace}</style>
+<style>svg{--font-display:"Bahnschrift SemiCondensed",Bahnschrift,"Arial Narrow",sans-serif;--font-body:"Segoe UI",Arial,sans-serif;--font-mono:"Cascadia Code",Consolas,monospace} text{font-family:var(--font-body);font-style:normal}.display{font-family:var(--font-display)}.mono{font-family:var(--font-mono)}</style>
 <rect x="0" y="0" width="1440" height="900" rx="0" fill="#f7f5fb" stroke="none" stroke-width="1"/>
 <rect x="0" y="0" width="232" height="900" rx="0" fill="#f0ecf8" stroke="none" stroke-width="1"/>
 <rect x="24" y="26" width="36" height="36" rx="11" fill="#612fff" stroke="none" stroke-width="1"/>
-<text x="42" y="51" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">A</text>
-<text x="71" y="47" font-size="18" fill="#211b35" font-weight="800">apprentice</text>
+<text x="42" y="50" font-size="13" fill="#ffffff" font-weight="800" text-anchor="middle">SG</text>
+<text x="71" y="47" font-size="18" fill="#211b35" font-weight="800" class="display">Skill Gym</text>
 <text x="71" y="63" font-size="9" fill="#625c76" font-weight="600">TEAM VERDIN CONCEPT</text>
 <path d="M16 105H216" stroke="#dcd5e9" stroke-width="1"/>
 <text x="24" y="134" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1.2">ONE REAL-WORK LOOP</text>
@@ -28,13 +28,13 @@
 <text x="43" y="868" font-size="10" fill="#625c76" font-weight="400">No backend actions</text>
 <rect x="232" y="0" width="1208" height="62" rx="0" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8"/>
 <path d="M232 62H1440" stroke="#dcd5e9" stroke-width="1"/>
-<text x="264" y="37" font-size="12" fill="#625c76" font-weight="400">Apprentice   /   User insight   /</text>
-<text x="477" y="37" font-size="12" fill="#211b35" font-weight="700">Learning opportunity</text>
+<text x="264" y="37" font-size="12" fill="#625c76" font-weight="400">Skill Gym   /   User insight   /</text>
+<text x="478" y="37" font-size="12" fill="#211b35" font-weight="700">Learning opportunity</text>
 <rect x="1190" y="18" width="132" height="26" rx="13.0" fill="#eae4fb" stroke="none" stroke-width="1"/>
 <text x="1256.0" y="35.0" font-size="11" fill="#4d1fe1" font-weight="700" text-anchor="middle">V2 SVG CONCEPT</text>
 <text x="1342" y="36" font-size="10" fill="#625c76" font-weight="700" letter-spacing="1">MANAGER</text>
 <text x="264" y="101" font-size="11" fill="#4d1fe1" font-weight="800" letter-spacing="1">MANAGER DECISION · BEFORE THE WORK STARTS</text>
-<text x="264" y="147" font-size="35" fill="#211b35" font-weight="800">Which judgement should remain human?</text>
+<text x="264" y="147" font-size="35" fill="#211b35" font-weight="800" class="display">Which judgement should remain human?</text>
 <text x="264" y="179" font-size="14" fill="#625c76" font-weight="400">The manager decides where automation helps and where real work still develops expertise.</text>
 <rect x="264" y="202" width="1144" height="92" rx="18" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
 <rect x="284" y="219" width="160" height="26" rx="13.0" fill="#fff1d8" stroke="none" stroke-width="1"/>
@@ -47,7 +47,7 @@
 <text x="1268" y="253" font-size="12" fill="#211b35" font-weight="700">Medium</text>
 <rect x="264" y="316" width="798" height="479" rx="20" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
 <text x="286" y="346" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">RULE-BACKED PROPOSAL</text>
-<text x="286" y="377" font-size="21" fill="#211b35" font-weight="700">Four steps. Three kinds of ownership.</text>
+<text x="286" y="377" font-size="21" fill="#211b35" font-weight="700" class="display">Four steps. Three kinds of ownership.</text>
 <text x="1035" y="352" font-size="11" fill="#625c76" font-weight="600" text-anchor="end">Manager confirmation</text>
 <rect x="265" y="394" width="796" height="36" rx="0" fill="#f1edf8" stroke="none" stroke-width="1"/>
 <text x="286" y="417" font-size="10" fill="#625c76" font-weight="800" letter-spacing="1">WORK STEP</text>
@@ -92,7 +92,7 @@
 <rect x="1090" y="325" width="314" height="389" rx="22" fill="#eae4fb" stroke="none" stroke-width="1"/>
 <rect x="1082" y="316" width="326" height="398" rx="22" fill="#ffffff" fill-opacity=".78" stroke="#dcd5e9" stroke-opacity=".8" filter="url(#panel-shadow)"/>
 <text x="1104" y="347" font-size="10" fill="#4d1fe1" font-weight="800" letter-spacing="1">THE DECISION THAT MATTERS</text>
-<text x="1104" y="385" font-size="22" fill="#211b35" font-weight="700">Why the learner?</text>
+<text x="1104" y="385" font-size="22" fill="#211b35" font-weight="700" class="display">Why the learner?</text>
 <text x="1104" y="440" font-size="12" fill="#625c76" font-weight="400">AI prepares traceable sources.</text>
 <text x="1104" y="458" font-size="12" fill="#625c76" font-weight="400">The learner makes the decisions</text>
 <text x="1104" y="476" font-size="12" fill="#625c76" font-weight="400">that exercise user insight.</text>
@@ -115,5 +115,5 @@
 <text x="264" y="846" font-size="13" fill="#211b35" font-weight="700">Manager confirms the proposal or records a permitted override.</text>
 <text x="264" y="866" font-size="11" fill="#625c76" font-weight="400">Prototype view · no allocation is written to the backend.</text>
 <rect x="1158" y="833" width="250" height="43" rx="21" fill="#612fff" stroke="none" stroke-width="1"/>
-<text x="1283" y="860" font-size="12" fill="#ffffff" font-weight="800" text-anchor="middle">CONFIRM PROPOSAL   →</text>
+<text x="1283" y="860" font-size="12" fill="#ffffff" font-weight="800" text-anchor="middle">PREVIEW NEXT STEP   →</text>
 </svg>
