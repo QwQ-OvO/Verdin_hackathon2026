@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
-  <title id="title">Product architecture for an AI apprenticeship system</title>
-  <desc id="desc">Four parts: learner workspace, manager workspace, allocation and evidence engine, and platform safeguards. Future expansion is outside MVP.</desc>
+  <title id="title">Product architecture for junior employee development</title>
+  <desc id="desc">Four parts: junior employee workspace, manager workspace, allocation and evidence engine, and platform safeguards. Future expansion is outside MVP.</desc>
   <defs>
     <style>text{font-family:Inter,Arial,sans-serif;fill:#191a22}.title{font-size:44px;font-weight:750}.section{font-size:27px;font-weight:700}.tile{font-size:20px;font-weight:560}.meta{font-size:17px;fill:#697080}.small{font-size:16px;fill:#697080}.num{font-size:34px;font-weight:800;fill:#5ebda6}</style>
     <linearGradient id="mint" x2="1" y2="1"><stop stop-color="#f0fcf8"/><stop offset="1" stop-color="#dff5ee"/></linearGradient>
@@ -8,11 +8,11 @@
     <linearGradient id="warm" x2="1" y2="1"><stop stop-color="#fbfaf8"/><stop offset="1" stop-color="#f1eeea"/></linearGradient>
   </defs>
   <rect width="1600" height="980" fill="#fff"/>
-  <text x="119" y="112" class="num">01</text><text x="203" y="112" class="title">Product Architecture | AI Apprenticeship</text>
-  <text x="203" y="150" class="meta">Automate the work. Preserve the judgement.</text>
+  <text x="119" y="112" class="title">Product Architecture | Junior Employee Development</text>
+  <text x="119" y="150" class="meta">Automate the work. Preserve the judgement.</text>
 
   <rect x="120" y="190" width="660" height="290" rx="18" fill="url(#mint)" stroke="#58bea8" stroke-width="2"/>
-  <rect x="287" y="205" width="326" height="44" rx="22" fill="#fff" stroke="#cfece3"/><text x="450" y="234" text-anchor="middle" class="section" font-size="24">Learner workspace</text>
+  <rect x="260" y="205" width="380" height="44" rx="22" fill="#fff" stroke="#cfece3"/><text x="450" y="234" text-anchor="middle" class="section" font-size="24">Junior employee workspace</text>
   <rect x="145" y="270" width="294" height="58" rx="9" fill="#fff" stroke="#d5e8e2"/><text x="292" y="307" text-anchor="middle" class="tile">Task goal &amp; source material</text>
   <rect x="461" y="270" width="294" height="58" rx="9" fill="#fff" stroke="#d5e8e2"/><text x="608" y="307" text-anchor="middle" class="tile">Original feedback &amp; citations</text>
   <rect x="145" y="341" width="294" height="58" rx="9" fill="#fff" stroke="#d5e8e2"/><text x="292" y="378" text-anchor="middle" class="tile">First judgement, saved</text>
@@ -47,6 +47,6 @@
 
   <rect x="120" y="815" width="1342" height="83" rx="13" fill="#fafbfc" stroke="#d7dce4" stroke-dasharray="7 5"/>
   <text x="158" y="851" class="section" font-size="21" fill="#5a5d66">Later expansion</text><text x="379" y="851" class="tile">Cross-team matching · More roles · Deeper integrations · Career planning</text>
-  <text x="158" y="880" class="small">MVP: one capability, one real task, one learner and one manager; all business decisions remain under manager review.</text>
+  <text x="158" y="880" class="small">MVP: one capability, one real task, one junior employee and one manager; all business decisions remain under manager review.</text>
   <text x="790" y="938" text-anchor="middle" class="small">A supervised real-work learning loop—not automatic certification or autonomous business approval.</text>
 </svg>

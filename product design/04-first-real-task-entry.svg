@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1380" viewBox="0 0 1600 1380" role="img" aria-labelledby="title desc">
   <title id="title">From a capability target to the first real task</title>
-  <desc id="desc">The manager defines a capability target and registers real work, the system proposes a learning and authority plan, and the learner completes a first judgement. Generated baseline exercises and cross-company matching are outside MVP.</desc>
+  <desc id="desc">The manager defines a capability target and registers real work, the system proposes a learning and authority plan, and the junior employee completes a first judgement. Generated baseline exercises and cross-company matching are outside MVP.</desc>
   <defs><style>text{font-family:Inter,Arial,sans-serif;fill:#1d2029}.title{font-size:43px;font-weight:780}.subtitle{font-size:22px;fill:#555d6b}.lane{font-size:28px;font-weight:740}.box{font-size:21px;font-weight:690}.sub{font-size:16px;fill:#626a79}.num{font-size:21px;font-weight:770}.future{font-size:20px;font-weight:700}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#838996"/></marker></defs>
   <rect width="1600" height="1380" fill="#fff"/>
-  <text x="800" y="78" text-anchor="middle" class="title">04  From Capability Target to First Real Task</text>
-  <text x="800" y="115" text-anchor="middle" class="subtitle">MVP: one learner, one manager, one company-defined capability and one live work item</text>
+  <text x="800" y="78" text-anchor="middle" class="title">From Capability Target to First Real Task</text>
+  <text x="800" y="115" text-anchor="middle" class="subtitle">MVP: one junior employee, one manager, one company-defined capability and one live work item</text>
   <rect x="95" y="157" width="443" height="1015" rx="15" fill="#f9fcfa" stroke="#d4e8df"/>
   <rect x="579" y="157" width="443" height="1015" rx="15" fill="#faf9ff" stroke="#dfdbfb"/>
   <rect x="1063" y="157" width="443" height="1015" rx="15" fill="#fbfaf8" stroke="#e4dfd9"/>
   <rect x="95" y="157" width="443" height="55" rx="15" fill="#e3f7f0"/><rect x="579" y="157" width="443" height="55" rx="15" fill="#eeebff"/><rect x="1063" y="157" width="443" height="55" rx="15" fill="#f0eeeb"/>
-  <text x="317" y="194" text-anchor="middle" class="lane">Learner</text><text x="800" y="194" text-anchor="middle" class="lane">AI system</text><text x="1284" y="194" text-anchor="middle" class="lane">Manager / team</text>
+  <text x="317" y="194" text-anchor="middle" class="lane">Junior employee</text><text x="800" y="194" text-anchor="middle" class="lane">AI system</text><text x="1284" y="194" text-anchor="middle" class="lane">Manager / team</text>
 
   <g fill="none" stroke="#858b95" stroke-width="2.5" marker-end="url(#a)"><path d="M1100 302V351"/><path d="M1100 425H800V474"/><path d="M984 548V597"/><path d="M984 671H1284V720"/><path d="M1100 794H317V843"/><path d="M501 917V966"/><path d="M501 1040H800V1089"/></g>
 

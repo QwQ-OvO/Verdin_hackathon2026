@@ -1,38 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1580" viewBox="0 0 1600 1580" role="img" aria-labelledby="title desc">
-  <title id="title">Real-work learning loop</title>
-  <desc id="desc">A manager registers and reviews a real task, an AI system proposes allocation and records evidence, and a learner makes a first judgement and revises. Capability is evaluated across tasks, separately from delivery approval.</desc>
-  <defs><style>text{font-family:Inter,Arial,sans-serif;fill:#1d2029}.title{font-size:43px;font-weight:780}.lane{font-size:28px;font-weight:740}.box{font-size:21px;font-weight:680}.sub{font-size:16px;fill:#626a79}.num{font-size:21px;font-weight:770}.foot{font-size:19px;fill:#444b58}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#838996"/></marker></defs>
-  <rect width="1600" height="1580" fill="#fff"/>
-  <text x="800" y="79" text-anchor="middle" class="title">03  Real-Work Loop | Delivery ≠ Mastery</text>
-  <text x="800" y="113" text-anchor="middle" class="sub">One real task creates a reviewable judgement trail; a new context provides further capability evidence.</text>
-  <rect x="90" y="149" width="456" height="1290" rx="14" fill="#f9fcfa" stroke="#d4e8df"/>
-  <rect x="572" y="149" width="456" height="1290" rx="14" fill="#faf9ff" stroke="#dfdbfb"/>
-  <rect x="1054" y="149" width="456" height="1290" rx="14" fill="#fbfaf8" stroke="#e4dfd9"/>
-  <rect x="90" y="149" width="456" height="55" rx="14" fill="#e3f7f0"/><rect x="572" y="149" width="456" height="55" rx="14" fill="#eeebff"/><rect x="1054" y="149" width="456" height="55" rx="14" fill="#f0eeeb"/>
-  <text x="318" y="186" text-anchor="middle" class="lane">Learner</text><text x="800" y="186" text-anchor="middle" class="lane">AI system</text><text x="1282" y="186" text-anchor="middle" class="lane">Manager / organisation</text>
-
-  <g fill="none" stroke="#858b95" stroke-width="2.5" marker-end="url(#a)">
-    <path d="M1090 280H800V326"/><path d="M995 364H1282V419"/><path d="M1090 457H318V512"/>
-    <path d="M510 550H800V605"/><path d="M605 643H318V698"/><path d="M510 736H1282V791"/>
-    <path d="M1090 829H800V884"/><path d="M992 922H1282V977"/><path d="M1090 1015H318V1070"/>
-    <path d="M510 1108H1282V1163"/><path d="M1090 1201H800V1256"/><path d="M992 1294H1282V1349"/>
-  </g>
-
-  <rect x="1090" y="224" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="262" r="21" fill="#e8e5e0"/><text x="1122" y="270" text-anchor="middle" class="num">1</text><text x="1153" y="254" class="box">Register a real task</text><text x="1153" y="279" class="sub">Source, deadline, risk, review criteria</text>
-  <rect x="608" y="317" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="355" r="21" fill="#ded9ff"/><text x="640" y="363" text-anchor="middle" class="num">2</text><text x="671" y="347" class="box">Propose step allocation</text><text x="671" y="372" class="sub">Learning value + authority checks</text>
-  <rect x="1090" y="410" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="448" r="21" fill="#e8e5e0"/><text x="1122" y="456" text-anchor="middle" class="num">3</text><text x="1153" y="440" class="box">Confirm or override plan</text><text x="1153" y="465" class="sub">Name learner, reviewer, approval limit</text>
-  <rect x="126" y="503" width="384" height="76" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="158" cy="541" r="21" fill="#caefe0"/><text x="158" y="549" text-anchor="middle" class="num">4</text><text x="189" y="533" class="box">Submit first judgement</text><text x="189" y="558" class="sub">Read originals; cite evidence first</text>
-  <rect x="608" y="596" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="634" r="21" fill="#ded9ff"/><text x="640" y="642" text-anchor="middle" class="num">5</text><text x="671" y="626" class="box">Check evidence, give hints</text><text x="671" y="651" class="sub">Only after first version is saved</text>
-  <rect x="126" y="689" width="384" height="76" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="158" cy="727" r="21" fill="#caefe0"/><text x="158" y="735" text-anchor="middle" class="num">6</text><text x="189" y="719" class="box">Revise with reasons</text><text x="189" y="744" class="sub">Show what changed and why</text>
-  <rect x="1090" y="782" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="820" r="21" fill="#e8e5e0"/><text x="1122" y="828" text-anchor="middle" class="num">7</text><text x="1153" y="812" class="box">Review and decide</text><text x="1153" y="837" class="sub">Approve output or return for revision</text>
-  <rect x="608" y="875" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="913" r="21" fill="#ded9ff"/><text x="640" y="921" text-anchor="middle" class="num">8</text><text x="671" y="905" class="box">Record evidence, suggest help</text><text x="671" y="930" class="sub">Versions, hints, feedback → next plan</text>
-  <rect x="1090" y="968" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="1006" r="21" fill="#e8e5e0"/><text x="1122" y="1014" text-anchor="middle" class="num">9</text><text x="1153" y="998" class="box">Confirm next support</text><text x="1153" y="1023" class="sub">Reduce, keep or increase hints</text>
-  <rect x="126" y="1061" width="384" height="76" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="158" cy="1099" r="21" fill="#caefe0"/><text x="158" y="1107" text-anchor="middle" class="num">10</text><text x="189" y="1091" class="box">Try a new real context</text><text x="189" y="1116" class="sub">Similar capability, different situation</text>
-  <rect x="1090" y="1154" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="1192" r="21" fill="#e8e5e0"/><text x="1122" y="1200" text-anchor="middle" class="num">11</text><text x="1153" y="1184" class="box">Assess across tasks</text><text x="1153" y="1209" class="sub">Delivery approval ≠ mastery</text>
-  <rect x="608" y="1247" width="384" height="76" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="640" cy="1285" r="21" fill="#ded9ff"/><text x="640" y="1293" text-anchor="middle" class="num">12</text><text x="671" y="1277" class="box">Update evidence profile</text><text x="671" y="1302" class="sub">Keep uncertainty and context visible</text>
-  <rect x="1090" y="1340" width="384" height="76" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1122" cy="1378" r="21" fill="#e8e5e0"/><text x="1122" y="1386" text-anchor="middle" class="num">13</text><text x="1153" y="1370" class="box">Confirm next allocation</text><text x="1153" y="1395" class="sub">Manager retains final judgement</text>
-
-  <rect x="100" y="1450" width="1400" height="80" rx="12" fill="#fffdf6" stroke="#efdba0"/>
-  <text x="800" y="1481" text-anchor="middle" class="foot">Before the first submission: AI may organise material or ask limited questions, but must not reveal its conclusion.</text>
-  <text x="800" y="1510" text-anchor="middle" class="foot">A first judgement and every hint are recorded; changes to business risk controls require separate approval.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1190" viewBox="0 0 1600 1190" role="img" aria-labelledby="title desc">
+<title id="title">Real-work allocation loop</title>
+<desc id="desc">The manager defines role capabilities and adds real work. The AI system builds a junior employee profile, evaluates each task and chooses automation, junior employee practice or senior ownership. The junior employee completes reserved work, the manager reviews it, and the system updates evidence and future allocation.</desc>
+<defs><style>text{font-family:Inter,Arial,sans-serif;fill:#1d2029}.title{font-size:43px;font-weight:780}.lane{font-size:28px;font-weight:740}.box{font-size:21px;font-weight:680}.sub{font-size:16px;fill:#626a79}.num{font-size:21px;font-weight:770}.out{font-size:20px;font-weight:700}.muted{fill:#566577}.green{fill:#15765f}.section{font-size:23px;font-weight:730}.foot{font-size:17px;fill:#444b58}</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="#838996"/></marker></defs>
+<rect width="1600" height="1190" fill="#fff"/>
+<text x="800" y="78" class="title" text-anchor="middle">Real-Work Allocation Loop</text>
+<text x="800" y="112" class="sub" text-anchor="middle">Real tasks, real feedback, continuous development.</text>
+<rect x="90" y="149" width="456" height="970" rx="14" fill="#f9fcfa" stroke="#d4e8df"/>
+<rect x="572" y="149" width="456" height="970" rx="14" fill="#faf9ff" stroke="#dfdbfb"/>
+<rect x="1054" y="149" width="456" height="970" rx="14" fill="#fbfaf8" stroke="#e4dfd9"/>
+<rect x="90" y="149" width="456" height="55" rx="14" fill="#e3f7f0"/><rect x="572" y="149" width="456" height="55" rx="14" fill="#eeebff"/><rect x="1054" y="149" width="456" height="55" rx="14" fill="#f0eeeb"/>
+<text x="318" y="186" class="lane" text-anchor="middle">Junior employee</text><text x="800" y="186" class="lane" text-anchor="middle">Allocation System (AI)</text><text x="1282" y="186" class="lane" text-anchor="middle">Manager / Organisation</text>
+<text x="126" y="252" class="section">Setup</text><text x="126" y="281" class="sub">Define what to develop and assess</text><text x="126" y="303" class="sub">the junior employee's current level.</text>
+<text x="126" y="364" class="section">Dynamic work allocation loop</text><text x="126" y="393" class="sub">Real tasks and feedback inform</text>
+<text x="126" y="415" class="sub">the next allocation.</text>
+<g fill="none" stroke="#858b95" stroke-width="2.5" marker-end="url(#a)">
+<path d="M1090 274H992"/><path d="M800 314V396"/><path d="M1090 437H992"/>
+<path d="M800 478V514H535V536"/><path d="M800 514H900V536"/><path d="M800 514H1265V536"/>
+<path d="M900 649V715H318V750"/><path d="M510 791H1090"/>
+<path d="M1282 832V865H800V896"/><path d="M800 978V1005"/>
+<path d="M800 1087V1110H50V437H608"/>
+</g>
+<rect x="1090" y="233" width="384" height="82" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1124" cy="274" r="21" fill="#e8e5e0"/><text x="1124" y="282" class="num" text-anchor="middle">1</text><text x="1156" y="267" class="box">Define role capabilities</text><text x="1156" y="295" class="sub">Set the key capabilities to develop.</text>
+<rect x="608" y="233" width="384" height="82" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="642" cy="274" r="21" fill="#ded9ff"/><text x="642" y="282" class="num" text-anchor="middle">2</text><text x="674" y="267" class="box">Build junior employee profile</text><text x="674" y="295" class="sub">Current skills, evidence and needs.</text>
+<rect x="1090" y="396" width="384" height="82" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1124" cy="437" r="21" fill="#e8e5e0"/><text x="1124" y="445" class="num" text-anchor="middle">3</text><text x="1156" y="430" class="box">Add real work</text><text x="1156" y="458" class="sub">Context, priority, risk and deadline.</text>
+<rect x="608" y="396" width="384" height="82" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="642" cy="437" r="21" fill="#ded9ff"/><text x="642" y="445" class="num" text-anchor="middle">4</text><text x="674" y="430" class="box">Evaluate &amp; allocate</text><text x="674" y="458" class="sub">Learning value + business constraints.</text>
+<rect x="370" y="536" width="330" height="113" rx="11" fill="#eaf6ff" stroke="#8bc8ed"/><text x="535" y="571" class="out muted" text-anchor="middle">Available for automation</text><text x="535" y="601" class="sub" text-anchor="middle">Low development value</text><text x="535" y="623" class="sub" text-anchor="middle">for this junior employee.</text>
+<rect x="735" y="536" width="330" height="113" rx="11" fill="#e9f8f2" stroke="#68bda3"/><text x="900" y="571" class="out green" text-anchor="middle">Reserve for junior employee</text><text x="900" y="601" class="sub" text-anchor="middle">Valuable practice at</text><text x="900" y="623" class="sub" text-anchor="middle">appropriate risk.</text>
+<rect x="1100" y="536" width="330" height="113" rx="11" fill="#f7f6f3" stroke="#c8c1b9"/><text x="1265" y="571" class="out " text-anchor="middle">Senior-led</text><text x="1265" y="601" class="sub" text-anchor="middle">High risk, responsibility</text><text x="1265" y="623" class="sub" text-anchor="middle">or senior expertise.</text>
+<text x="535" y="680" class="sub" text-anchor="middle">Sent to existing AI automation workflow</text>
+<text x="1265" y="680" class="sub" text-anchor="middle">Assigned to senior to handle</text>
+<rect x="126" y="750" width="384" height="82" rx="11" fill="#eaf9f2" stroke="#65b79e"/><circle cx="160" cy="791" r="21" fill="#caefe0"/><text x="160" y="799" class="num" text-anchor="middle">5</text><text x="192" y="784" class="box">Complete reserved work</text><text x="192" y="812" class="sub">Do the work; make key judgements.</text>
+<rect x="1090" y="750" width="384" height="82" rx="11" fill="#fff" stroke="#bfb9b1"/><circle cx="1124" cy="791" r="21" fill="#e8e5e0"/><text x="1124" y="799" class="num" text-anchor="middle">6</text><text x="1156" y="784" class="box">Review and give feedback</text><text x="1156" y="812" class="sub">Manager retains final responsibility.</text>
+<rect x="608" y="896" width="384" height="82" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="642" cy="937" r="21" fill="#ded9ff"/><text x="642" y="945" class="num" text-anchor="middle">7</text><text x="674" y="930" class="box">Update capability evidence</text><text x="674" y="958" class="sub">Record performance and feedback.</text>
+<rect x="608" y="1005" width="384" height="82" rx="11" fill="#f2f0ff" stroke="#9e92ff"/><circle cx="642" cy="1046" r="21" fill="#ded9ff"/><text x="642" y="1054" class="num" text-anchor="middle">8</text><text x="674" y="1039" class="box">Adjust future allocation</text><text x="674" y="1067" class="sub">Use the updated profile next time.</text>
+<rect x="202" y="1089" width="328" height="36" rx="10" fill="#fff" stroke="#d3d8e0"/>
+<text x="366" y="1113" class="foot" text-anchor="middle">Next real task + updated profile</text>
+<text x="800" y="1162" class="foot" text-anchor="middle">The manager reviews work and retains final responsibility for business decisions.</text>
 </svg>
